@@ -1,0 +1,4237 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.creative-tim.com/product/material-kit-pro by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:53:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head  itemscope itemtype="https://schema.org/WebSite"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+  
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2315e0b361","applicationID":"9961421","transactionName":"dVwNRxYMCFtVS01CQllXFlAQTBdfX04=","queueTime":7,"applicationTime":2014,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="p:domain_verify" content="96e683d0045e44dfac2deaec70e57185"/>
+
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon-239aa284801fb5629683f051242d546de2386981abd5b5208b3edcf8a5d06d8c.ico" />
+
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/apple-touch-icon-precomposed-8f3c48df0d37cb6feb6c3e0894af66053afc8a2a6711c4742c46ac4a8cad84ff.png">
+  <link rel="canonical" href="material-kit-pro.html" data-turbolinks-track="false" itemprop="url"/>
+
+  <title itemprop="name">
+      Material Kit PRO: Premium Bootstrap 4 Material Design UI Kit @ Creative Tim
+  </title>
+      <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CreativeTim" />
+    <meta name="twitter:creator" content="@CreativeTim" />
+    <meta name="twitter:title" content="Material Kit Pro by Creative Tim" />
+    <meta name="twitter:description" content="Premium Bootstrap 4 UI Kit" />
+    <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg?1515776562" />
+    <meta name="twitter:url" content="https://www.creative-tim.com/product/material-kit-pro" />
+
+
+  <meta name="description" content="Download Material Kit PRO a premium Bootstrap 4 UI Kit developed by Creative Tim. See the live demo on our site and join over 100.000 creatives!">
+<meta name="keywords" content="creativetim, creative tim, bootstrap, theme, freebies, bootstrap kit, bootstrap template, free items, beautiful ui">
+<meta property="og:app_id" content="655968634437471">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Material Kit Pro by Creative Tim">
+<meta property="og:url" content="https://www.creative-tim.com/product/material-kit-pro">
+<meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg?1515776562">
+<meta property="product:price:amount" content="79.0">
+<meta property="product:price:currency" content="USD">
+<meta property="product:availability" content="in Stock">
+<meta property="product:brand" content="Creative Tim">
+<meta property="product:category" content="UI Kits">
+<meta name="data-turbolinks-track" content="false">
+  <link rel="stylesheet" media="all" href="../assets/application-67e1b0f9fee338090a20616b3d4aed1baf2bfa039c50a9b8c915b7ae2a54e9b9.css" data-turbolinks-track="reload" />
+
+  <!-- font -->
+  <link href="../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MJA4aRVFciBsgxdOvH4CBIw0qXnyzF40uzTiSYL+nuaWdvz+u/bzoiQt5QUIqF0PyYniTLKTKZ3AT3kziOZnKw==" />
+
+  <!--  js   -->
+  <script src="https://www.creative-tim.com/assets/application-9051cf69705029a9fe1f08cc5977bf494d36a08727c6d93f498ef4b9a8cd18c5.js" data-turbolinks-track="reload"></script>
+  <script src="https://www.creative-tim.com/assets/mentions-and-photoswipe-dd7db061aa9f3288ebeb86b3020daf1cfa2e7a9808db338f94769a2200b3c0aa.js" data-turbolinks-track="reload"></script>
+
+
+<!-- Google Analytics New -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  // On the Origin Domain
+  try {
+      ga('create', 'UA-46172202-1', 'auto', {'allowLinker': true});
+  } catch (e) {
+      console.log("Google error");
+  }
+  try {
+      ga('require', 'linker');
+  } catch (e) {
+      console.log("Google error");
+  }
+  try {
+      ga('require', 'ecommerce');
+  } catch (e) {
+      console.log("Google error");
+  }
+  try {
+      ga('linker:autoLink', ['creative-tim.com','avangate.com']);    // Domains that are linked from this page.
+  } catch (e) {
+      console.log("Google error");
+  }
+  try {
+      ga('send', 'pageview');                         // Send hits after initializing the auto-linker plug-in.
+  } catch (e) {
+      console.log("Google error");
+  }
+
+
+</script>
+<!-- End Google Analytics -->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script',"../../connect.facebook.net/en_US/fbevents.js");
+
+try{
+	fbq('init', '111649226022273');
+	fbq('track', "PageView");
+
+}catch(err) {
+	console.log('Facebook Track Error:', err);
+}
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="../../www.facebook.com/tr5c3c.gif?id=111649226022273&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+
+<!-- End Facebook Pixel Code -->
+
+<!-- Hotjar Tracking Code for www.creative-tim.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:99526,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,"https://static.hotjar.com/c/hotjar-99526.js?");
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+</head>
+
+<body class="product-page">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = '../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=655968634437471&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+
+    function shareFacebookWithCallBack(){
+       $.post('/share',{social_network : 1, product_id : parseInt('46'), provider: 'facebook' },function(data){
+            if(data['status'] == 'ok'){
+                console.log('ShareUp');
+            }
+       });
+    }
+    //twitter share
+        window.twttr = (function (d,s,id) {
+          var t, js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+          js.src="../../platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+        }(document, "script", "twitter-wjs"));
+
+        // On ready, register the callback...
+        twttr.ready(function (twttr) {
+            twttr.events.bind('tweet', function (event) {
+                $.post('/share',{social_network : 2, product_id : parseInt('46'), provider: 'twitter' },function(data){
+                    if(data['status'] == 'ok'){
+                        console.log('ShareUp');
+                    }
+               });
+            });
+        });
+
+    function googleShare(event){
+        var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = 'https://plus.google.com/share?url=https://www.creative-tim.com/product/material-kit-pro',
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+        window.open(url, 'Google+', opts);
+        $.post('/share',{social_network : 3, product_id : parseInt('46'), provider: 'google' },function(data){
+                    if(data['status'] == 'ok'){
+                        console.log('ShareUp');
+                    }
+               });
+        return false;
+    }
+</script>
+
+
+  <nav class="navbar filter-bar fixed-absolute">
+    <div class="container">
+    <div class="notification">
+        <div id="notif-message" class="notif-message" style="display: none;" notice-type=success>
+        </div>
+    </div>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div data-turbolinks="false">
+            <a href="https://www.creative-tim.com/" class="navbar-brand">
+                <div class="logo">
+                    <img src="../../s3.amazonaws.com/creativetim_bucket/new_logo.png" width="60" height ="60"/>
+                </div>
+                <p>Creative <br> Tim</p>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+        <ul class="nav navbar-nav navbar-right" data-turbolinks="false">
+
+            <li data-turbolinks="false">
+            		<div itemscope itemtype="http://schema.org/WebSite">
+            	        <meta itemprop="url" content="https://www.creative-tim.com/"/>
+            	        <form class="navbar-form navbar-right navbar-search-form" itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/SearchAction" style="display: none;" action="https://www.creative-tim.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+            	        <div class="form-group">
+            	            <meta itemprop="target" content="https://www.creative-tim.com/search?q={}"/>
+            	            <input type="text" name="q" id="q" class="form-control search" placeholder="Search..." itemprop="query-input" />
+            	        </div>
+</form>            	    </div>
+            </li data-turbolinks="false">
+                <li>
+		            <a href="javascript:void(0)" data-toggle="search-form">
+		                <i class="icon-search icon-2x"></i>
+		                <p>Search</p>
+		            </a>
+				</li>
+
+            <li class="dropdown dropdown-categories" data-turbolinks="false">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-th-large icon-2x"></i>
+                    <p>
+                        Categories
+                        <span class="caret"></span>
+                    </p>
+
+                </a>
+
+            <ul class="dropdown-menu">
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes">
+                        All Categories
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/admin-dashboard">
+                        Admin &amp; Dashboards
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/ui-kit">
+                        UI Kits
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/free">
+                        Free Themes
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/premium">
+                        Premium Themes
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/angular-themes">
+                        Angular Themes
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/react-themes">
+                        React Themes
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/vuejs-themes">
+                        Vue Themes
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/angular-dashboard">
+                        Angular Dashboards
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/landing-page">
+                        Landing Pages
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/e-commerce">
+                        E-commerce
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/one-page-template">
+                        One Page Templates
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/wizard">
+                        Wizards
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/calendar">
+                        Calendar
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/login-form">
+                        Login Forms
+                    </a>
+                </li>
+                <li data-turbolinks="false">
+                    <a href="https://www.creative-tim.com/bootstrap-themes/components">
+                        Components
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="big-bundle dropdown dropdown-categories" data-turbolinks="false">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-gift icon-2x"></i>
+                <p>
+                    Bundles
+                    <span class="caret"></span>
+                </p>
+                <span class="notification-bubble notification-inverted">New</span>
+
+            </a>
+            <ul class="dropdown-menu">
+    				  <li>
+    <a href="https://www.creative-tim.com/product/buy/bundle/big-bundle">
+        <div class="bundle-name">
+            Big Bundle
+            <small> 29 PRODUCTS </small>
+        </div>
+
+        <div class="bundle-price">
+            $249
+        </div>
+    </a>
+</li>
+
+    				  <li>
+    <a href="https://www.creative-tim.com/product/buy/bundle/2017-bundle">
+        <div class="bundle-name">
+            2017 Bundle
+            <small> 10 PRODUCTS </small>
+        </div>
+
+        <div class="bundle-price">
+            $199
+        </div>
+    </a>
+</li>
+
+    				  <li>
+    <a href="https://www.creative-tim.com/product/buy/bundle/2016-bundle">
+        <div class="bundle-name">
+            2016 Bundle
+            <small> 8 PRODUCTS </small>
+        </div>
+
+        <div class="bundle-price">
+            $199
+        </div>
+    </a>
+</li>
+
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="http://blog.creative-tim.com/">
+                <i class="icon-align-left icon-2x"></i>
+                <p>Blog</p>
+            </a>
+        </li>
+
+
+
+
+            <li data-turbolinks="false">
+                <a href="javascript:void(0)" onclick="openLoginModal();" role="button" data-toggle="modal">
+                    <i class="icon-male-sign-alt icon-2x"></i>
+                    <p>Login/Register</p>
+                </a>
+            </li>
+
+
+
+            <li class="noty-cart" data-turbolinks="false">
+                <a href="#" data-toggle="modal" data-target="#product-cart-modal">
+                    <i class="icon-shopping-cart icon-2x"></i>
+                    <span class="notification-bubble hidden" id="products-in-cart">
+                        0
+                    </span>
+                    <p>Your Cart </p>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+</nav>
+
+
+<div class="modal fade login" id="loginModal">
+    <div class="modal-dialog login animated">
+      <div class="modal-content">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Login with</h4>
+    </div>
+    <div class="modal-body">
+        <div class="box">
+            <div class="content">
+                <div class="social" data-turbolinks="false">
+                    <a id="github_login" class="circle github" href="https://www.creative-tim.com/social/github?destination=product_page&amp;subscribed=1&amp;url=https%253A%252F%252Fwww.creative-tim.com%252Fproduct%252Fmaterial-kit-pro">
+
+                            <i class="icon-github"></i>
+</a>                    <a id="google_login" class="circle google" href="https://www.creative-tim.com/social/google_oauth2?destination=product_page&amp;subscribed=1&amp;url=https%253A%252F%252Fwww.creative-tim.com%252Fproduct%252Fmaterial-kit-pro">
+
+                            <i class="icon-google-plus-alt"></i>
+</a>                    <a id="facebook_login" class="circle facebook" href="https://www.creative-tim.com/social/facebook?destination=product_page&amp;subscribed=1&amp;url=https%253A%252F%252Fwww.creative-tim.com%252Fproduct%252Fmaterial-kit-pro">
+
+                            <i class="icon-facebook-alt"></i>
+</a>                </div>
+                <div class="division">
+                      <div class="line l"></div>
+                      <span>or</span>
+                      <div class="line r"></div>
+                </div>
+
+                <div class="error inside-alert"></div>
+                <div class="form loginBox">
+
+                        <form html="{:multipart=&gt;true}" action="https://www.creative-tim.com/login" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+                            <input type="text" name="email" class="form-control" placeholder="Email" />
+                            <input type="password" name="password" class="form-control" placeholder="Password" />
+                            <input type="hidden" name="destination" value="product_page" />
+                            <input type="hidden" name="url" value="https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-pro" />
+                            <input type="submit" name="commit" value="Login" class="btn btn-default btn-login" data-disable-with="Login" />
+</form>                </div>
+             </div>
+        </div>
+        <div class="box">
+            <div class="content registerBox" style="display:none;">
+             <div class="form">
+                <form html="{:multipart=&gt;true}" action="https://www.creative-tim.com/register" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+                    <input type="text" name="email" class="form-control" placeholder="Email" />
+                    <input type="password" name="password" class="form-control" placeholder="Password" />
+                  	<input type="password" name="password_confirmation" class="form-control" placeholder="Repeat Password" />
+                    <input type="hidden" name="destination" value="product_page" />
+                    <input type="hidden" name="url" value="https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-pro" />
+                    <input type="submit" name="commit" value="Create account" class="btn btn-default btn-register" data-disable-with="Create account" />
+                        <label class="checkbox">
+                            <input type="checkbox" value="1" data-toggle="checkbox" name="subscribed" class="ct-info checkbox-subscribe" checked>
+                            Subscribe me to the Newsletter
+                        </label>
+
+</form>             </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="forgot login-footer">
+
+            <span>Looking to
+                 <a href="javascript: showRegisterForm();">create an account</a>
+            ?</span>
+            <br />
+            <span><a href="https://www.creative-tim.com/forgot-password">Forgot password</a> ?</span>
+        </div>
+        <div class="forgot register-footer" style="display:none">
+             <span>Already have an account?</span>
+             <a href="javascript: showLoginForm();">Login</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+</div>
+
+<div class="modal fade cart-modal cart-modal-one-product" id="product-cart-modal" role="dialog">
+
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+				<div class="empty-cart-message">
+    <i class="icon-shopping-cart icon-2x"></i>
+    <h4>Your cart is currently empty.</h4>
+</div>
+<div class="text-center">
+    <a href="https://www.creative-tim.com/bootstrap-themes/premium#from-empty-shopping-cart" class="btn btn-info btn-new btn-fill btn-wd">
+        Start Shopping
+    </a>
+</div>
+
+
+
+<script type="text/javascript">
+	$('.makeLoading, .make-loading').click(function(){
+		$(this).html('<i class="fa fa-circle-o-notch fa-spin"></i> Loading...').addClass("disabled")
+	});
+</script>
+
+        </div>
+
+    </div>
+</div>
+
+
+  <!-- Facebook Additional Pixel Code -->
+
+<script>
+
+try{
+	fbq('track', 'ViewContent', {
+		content_ids: ['46'],
+		content_type: 'product',
+		value: '79.0',
+		currency: 'USD',
+		content_name: 'Material Kit Pro'
+	});
+
+}catch(err) {
+	console.log('Facebook Track Error:', err);
+}
+
+</script>
+
+<!-- End Facebook Additional Pixel Code -->
+
+
+<div class="modal fade" id="giftOfferModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-offer">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">&nbsp;</h4>
+        </div>
+
+        <div class="modal-body">
+<!--             <p><b class="merry">Happy Valentine's Day!</b><br /> -->
+            <p><b>
+            Get a special gift from us! <br />
+            Follow the steps below to receive it. <br />
+            </b></p>
+            <ol>
+              <li>Buy a premium product.</li>
+              <li>Download the product from your dashboard.</li>
+              <li>Press the <b>'Send gift'</b> button in your dashboard and offer a premium product (with the price lower or equal) as a gift.</li>
+            </ol>
+            </p>
+            <div class="text-center" data-turbolinks="false">
+                <a href="https://www.creative-tim.com/bootstrap-themes?utm_campaign=icecream-offer&amp;utm_source=tim&amp;utm_medium=modal" class="btn btn-danger btn-round btn-fill btn-new">Start shopping</a>
+            </div>
+
+            <div class="design-courtesy">Photo Courtesy of <a href="https://dribbble.com/shots/2523337-Ice-cream-gift-for-vk-com">Anton Kuryatnikov</a></div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<input type="hidden" id="product_id" value="46">
+
+<div class="top-moving-bar" data-turbolinks="false">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-9 col-xs-9">
+                <a class="navbar-brand" href="https://www.creative-tim.com/">
+                    <div class="logo">
+                        <img rel="tooltip" title="Hey! <br> Hope you're doing fine :-)" data-html="true" data-placement="bottom" src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png"/>
+                    </div>
+</a>                <h4>Material Kit Pro
+
+                    <div class="middot"></div>
+                        <div class="mask">
+                            <img rel="tooltip" data-placement="bottom" title="Fully Coded and Responsive HTML5" src="../assets/icon-html-5b52fefad55449b7d27a88a17297050257c8f72d24b56941e8a8cb569c38c44c.jpg" />
+                        </div>
+                        <div class="mask">
+                            <img rel="tooltip" data-placement="bottom" title="Sass Files for Professional Front End Developers" src="../assets/icon-sass-220dd5d9f39256d63922d1cd03eaf148b80108255338a1f8add31bd91e20b7ed.jpg" />
+                        </div>
+                        <div class="mask">
+                            <img rel="tooltip" data-placement="bottom" title="Photoshop Files for Professional Designers" src="../assets/icon-photoshop-3f7aeeb981123acd57d6bd2a9bdf1bbc0952b09e607ffc65447695a7eb8d0e3f.jpg" />
+                        </div>
+                        <div class="mask">
+                            <img rel="tooltip" data-placement="bottom" title="Crafted with Bootstrap - the most popular Front End Framework" src="../assets/icon-bootstrap-92b15f3b032b34675d9b9c5f493905d27b50d065e8a5c39623dca82638502461.jpg" />
+                        </div>
+                </h4>
+            </div>
+            <div class="col-md-5 col-sm-3 col-xs-3 text-right">
+
+                        <a class="btn btn-default btn-simple" target="_blank" href="../../demos.creative-tim.com/material-kit-pro/presentation.html">Live Preview</a>
+
+                        <a class="btn btn-default btn-simple" href="https://www.creative-tim.com/product/material-kit">Get Free Demo</a>
+
+
+                        <a class="btn btn-info btn-fill btn-wd btn-round" data-remote="true" href="https://www.creative-tim.com/add-product-in-cart/material-kit-pro">
+                            Buy now &middot;<b>
+                                $79
+                            </b>
+</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div itemscope itemtype="http://schema.org/Product">
+    <div id="productPage" class="parallax parallax-product parallax-" data-turbolinks="false" style="background: url('https://s3.amazonaws.com/creativetim_bucket/products/46/mk_pro_cover.jpg?1515776561')no-repeat;background-size: cover; ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="product-image">
+                        <a href="../../demos.creative-tim.com/material-kit-pro/presentation.html" target="_blank">
+                            <img src="../../s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnailc5d6.jpg?1515776562" alt="Material Kit Pro Image"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-md-offset-1">
+						<div class="pay-area">
+
+    <div class="text-center">
+        <h1 itemprop="name" class="product-name">
+			Material Kit Pro
+		</h1>
+        <h6 class="tagline">
+			Premium Bootstrap 4 UI Kit
+		</h6>
+		    <div class="rating-stars">
+        <input type="number" class="rating" data-min="1" data-max="5" value="5" disabled="disabled">
+        <div class="aggregate-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" data-turbolinks="false">
+            &middot;
+            <span itemprop="ratingValue">4.90</span>/5
+
+            <a href="https://www.creative-tim.com/product/material-kit-pro/reviews" >(<span itemprop="reviewCount">332</span> Reviews)</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+	    <div class="choose-license">
+            <p class="text-center">License
+                <a  class="btn btn-round btn-xs btn-neutral"
+                     href="https://www.creative-tim.com/license"
+                      rel="tooltip"
+                    title="Something unclear regarding the licenses? Click on the '?' and see more details."
+                   target="_blank">
+                    <i class=" fa fa-question"></i>
+                </a>
+            </p>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="tab-content" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta content="79.00" itemprop="price">
+            <meta content="USD" itemprop="priceCurrency">
+            <meta content="instock" itemprop="availability">
+				<a class="btn btn-new btn-neutral btn-fill btn-wd btn-round btn-add-cart" data-remote="true" href="https://www.creative-tim.com/add-product-in-cart/material-kit-pro">
+                    Add to Cart &middot;
+					<b>
+						
+		$79
+
+                    </b>
+</a>	    		<a href="../../demos.creative-tim.com/material-kit-pro/presentation.html" target="_blank" class="hidden-xs btn btn-new btn-wd btn-neutral btn-round">
+		Live Preview
+	</a>
+
+	<a href="../../demos.creative-tim.com/material-kit-pro/presentation.html" target="_blank" class="hidden-sm hidden-md hidden-lg btn btn-new btn-wd btn-neutral btn-round">
+		Live Preview
+	</a>
+
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-product-description section-white-gradient section-scaled" data-turbolinks="false">
+        <div class="container product">
+
+            <div class="row header-summary">
+
+                <div class="col-md-9">
+                    <div class="col-md-4">
+
+                        <div class="small-info">
+                            <i class="icon-cloud-download"></i>
+                            <h6 class="numbers">2,542 Downloads</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="small-info">
+                            <i class="icon-comment"></i>
+                            <h6 class="numbers">118 Comments</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="small-info">
+                            <i class="icon-medkit"></i>
+                            <h6 class="numbers">Premium Support</h6>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4">
+                        <div class="small-info">
+                            <i class="icon-gift"></i>
+                            <h6 class="numbers">Lifetime Updates</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="small-info">
+                            <i class="icon-suitcase"></i>
+                            <h6 class="numbers">
+                                Release: 2 years ago
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 ">
+                        <div class="small-info">
+                            <i class="icon-refresh"></i>
+                            <h6 class="numbers">
+                                Update: 2 months ago
+                            </h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+                            <div class="technologies pull-right">
+                                    <div class="mask">
+                                        <img rel="tooltip" title="Fully Coded and Responsive HTML5" src="../assets/icon-html-5b52fefad55449b7d27a88a17297050257c8f72d24b56941e8a8cb569c38c44c.jpg" />
+                                    </div>
+                                    <div class="mask">
+                                        <img rel="tooltip" title="Sass Files for Professional Front End Developers" src="../assets/icon-sass-220dd5d9f39256d63922d1cd03eaf148b80108255338a1f8add31bd91e20b7ed.jpg" />
+                                    </div>
+                                    <div class="mask">
+                                        <img rel="tooltip" title="Photoshop Files for Professional Designers" src="../assets/icon-photoshop-3f7aeeb981123acd57d6bd2a9bdf1bbc0952b09e607ffc65447695a7eb8d0e3f.jpg" />
+                                    </div>
+                                    <div class="mask">
+                                        <img rel="tooltip" title="Crafted with Bootstrap - the most popular Front End Framework" src="../assets/icon-bootstrap-92b15f3b032b34675d9b9c5f493905d27b50d065e8a5c39623dca82638502461.jpg" />
+                                    </div>
+                            </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="description collapse" id="productDescription" aria-expanded="false">
+                        <h1 class="sub-title">Premium Bootstrap 4 Material Design UI Kit</h1>
+                        <h4 class="legend text-center">Product description</h4>
+
+                        <span itemprop="description">
+                            Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design. If you like Google's Material Design, you will love this kit! It features a huge number of components built to fit together and look amazing. <br>
+<br>
+<b>Fully Coded Items</b><br>
+<br>Material Kit PRO features over 1000 individual components, giving you the freedom of choosing and combining. This means that there are thousands of possible combinations. All components can take variations in colour, that you can easily modify using SASS files. <br>
+<br>
+Every item comes in 2 forms: PSD element and HTML/CSS/JS implementation. You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. We wanted the design process to be seamless, so switching from image to the real page is very easy to do.<br>
+<br>
+<b>Layered Components</b><br>
+Every components comes with separate layers organised in folders. Every element has multiple states for colors, styles, hover, focus, that you can easily access and use. All PSD files are easy-to-use and we also offer support for any issue that you may find. You will find it easy to make changes and customise the elements, due to the smart objects used.<br><br>View <a target="_blank" rel="nofollow" href="../../demos.creative-tim.com/material-kit-pro/index.html">all components here</a>. <br><br><b></b><h3><b>Sections</b> </h3>Material Kit comes packed with a large number of sections. Putting together a page has never been easier than matching together sections. From team presentation to pricing options, you can easily customise and built your pages. We have created multiple options for you to put together and customise into pixel perfect pages.. View <a target="_blank" rel="nofollow" href="../../demos.creative-tim.com/material-kit-pro/sections.html">all sections here</a>.<br><br><b></b><h3><b>Example Pages</b></h3>If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example pages.  From landing pages to e-commerce or blog pages, you will be able to quickly set up the basic structure for your web project. View <a target="_blank" rel="nofollow" href="../../demos.creative-tim.com/material-kit-pro/examples/about-us.html">example pages here</a>.<br><br><br>Header image courtesy of <a target="_blank" rel="nofollow" href="https://www.facebook.com/TicuRazvanPhoto">Ticu Razvan Narcis</a>.<br><br>
+                        <span>
+                        <br />
+                            Current version <b>2.1.0</b>
+                            <a class="btn btn-sm btn-simple btn-info " href="#product-version-logs-modal-46" role="button" data-toggle="modal">
+                                See updates and changelog
+                            </a>
+                    </div>
+                    <div class="view-more text-center">
+                        <button class="btn btn-simple btn-default viewMoreButton" data-target="#productDescription">View More</button>
+                    </div>
+
+                        <div class="summary">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-6">
+                                    <div class="category">
+                                        <i class="icon-th-large"></i>
+                                        <p>1000 Handcrafted Components</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-xs-6">
+                                    <div class="category">
+                                        <i class="icon-gears"></i>
+
+                                        <p>7 Customized Plugins</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-xs-6">
+                                    <div class="category">
+                                        <i class="icon-picture"></i>
+
+                                        <p>11 Example Pages</p>
+                                    </div>
+                                </div>
+
+                                   <div class="col-md-4 col-xs-6">
+                                       <div class="category">
+                                           <i class="icon-bold"></i>
+                                           <p>Bootstrap Based</p>
+                                       </div>
+                                   </div>
+
+                                   <div class="col-md-4 col-xs-6">
+                                      <div class="category">
+                                          <i class="icon-file-text-alt"></i>
+                                          <p>Documentation</p>
+                                      </div>
+                                  </div>
+                                <div class="col-md-4 col-xs-6">
+                                    <div class="category">
+                                        <i class="icon-mobile-phone"></i>
+                                        <p>Fully Responsive</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    <h6 class="text-center">Product certified by: <span itemprop="brand">Creative Tim</span></h6>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div class="main-white section-check-free-pro section-white-gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+
+
+
+                        <h4 class="legend">Get Free Demo</h4>
+                        <p class="description">
+                            Learn more about Material Kit Pro in the light demo version. It has features from the full version. We hope you will like this introduction to this product!
+                        </p>
+
+                        <div class="row" data-turbolinks="false">
+
+                            <div class="col-md-5">
+                                <h5 class="subtitle">What is in Demo?</h5>
+                                <ul class="list-unstyled">
+                                    <li>Components &middot; <b>60</b> </li>
+                                    <li>Plugins &middot; <b>2</b></li>
+                                    <li>Examples Pages &middot; <b>3</b></li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    
+                                    <li>-</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <h5 class="subtitle">What is in PRO Version?</h5>
+                                <ul class="list-unstyled">
+                                    <li>Components &middot; <b>1000</b></li>
+                                    <li>Plugins &middot; <b>7</b></li>
+                                    <li>Example Pages &middot; <b>11</b></li>
+                                    <li>+ Documentation</li>
+                                    <li>+ SASS Files</li>
+                                    
+                                    <li>+ Photoshop Files</li>
+                                    
+                                </ul>
+                            </div>
+
+                                <a class="btn btn-new btn-fill btn-round btn-default" href="https://www.creative-tim.com/product/material-kit">Get Free Demo</a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <div class="image">
+                                <img src="../../s3.amazonaws.com/creativetim_bucket/products/38/thumb/opt_mk_thumbnail8eb9.jpg?1516963185" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    <div class="main main-dark section-creators">
+        <div class="container">
+            <div class="creators">
+                <div class="row">
+
+    <div class="col-md-8 col-md-offset-2" id="comments">
+        <div class="creators collaborators-card">
+            <h2 class="legend text-center">We are here to help you!</h2>
+
+            <div class="collaborators" data-turbolinks="false">
+
+
+                <div class="authors-container" data-collaborators="3">
+                    <div class="author">
+    <a class='card-user account-photo  account-product-owner '
+       rel='popover'
+       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+       data-initialized='0'
+       data-html='true'
+       data-placement='top'
+       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+       data-username='moldovanst'
+    >
+
+        <div class="mask">
+            <img src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" class="photo"/>
+        </div>
+
+            <div class="account-type">
+                <i class="fa fa-star"></i>
+            </div>
+    </a>
+</div>
+
+
+                        <div class="author">
+    <a class='card-user account-photo '
+       rel='popover'
+       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+       data-initialized='0'
+       data-html='true'
+       data-placement='top'
+       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+       data-username='alexpaduraru'
+    >
+
+        <div class="mask">
+            <img src="../../s3.amazonaws.com/creativetim_bucket/photos/1/thumb953e.jpg?1484594398" class="photo"/>
+        </div>
+
+    </a>
+</div>
+
+                        <div class="author">
+    <a class='card-user account-photo '
+       rel='popover'
+       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+       data-initialized='0'
+       data-html='true'
+       data-placement='top'
+       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+       data-username='dragosct'
+    >
+
+        <div class="mask">
+            <img src="../../s3.amazonaws.com/creativetim_bucket/photos/72415/thumba48c.jpg?1471333071" class="photo"/>
+        </div>
+
+    </a>
+</div>
+
+
+
+                    <br>
+                </div>
+
+                <div class="btn-area text-center">
+                    <h4 class="commented">118 Web Developers commented on this product</h4>
+
+                        <a target="_blank" class="btn btn-default btn-new btn-simple" href="https://github.com/creativetimofficial/ct-material-kit-pro/issues">
+                            <i class="fa fa-github-alt"></i> Report issue
+</a>
+                    <div class="collapse in" id="commentsCollapse">
+                            <input id="keep_product" class="hidden" value="46">
+
+                                <div class = "sort_paginate_ajax">
+                                    
+
+    
+
+<div class="comment " id="comment-10120">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">thomasoerz
+                    <ul>
+                    <li class = 'user-role downloaded' > downloaded</li>
+                    </ul>
+                <small>1 month ago</small>
+                </h4>
+            </div>
+            Hello Creative Tim!
+We purchased your PRO Kit. Is there any chance that there will be a VUE Version of it? Tooltips etc. do not work as expected with VUE... <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10124" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='thomasoerz'
+    	    >
+    	    	@thomasoerz
+    	    </a>, thank you for using our products, currently, we are working on the development of the VUE version, first, we&#39;ll launch the free version. Best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">1 month ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10120"></div>
+    
+
+<div class="comment " id="comment-10164">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">brianfurlong
+                <small>1 month ago</small>
+                </h4>
+            </div>
+            If I purchase the PRO Kit will I also have to purchase the Vue Version when it is ready? <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10316" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='brianfurlong'
+    	    >
+    	    	@brianfurlong
+    	    </a>, thank you for your interest in working with our products, yes, you have to purchase the VUE version. All the best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">24 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10164"></div>
+    
+
+<div class="comment " id="comment-10281">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">surinuthalapati
+                <small>26 days ago</small>
+                </h4>
+            </div>
+            Team, Do you have Material Kit Pro in Angular and with Dashboards? 
+
+I am looking for Material Dashboard Pro Angular with this.... Let me know.. <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10318" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='surinuthalapati'
+    	    >
+    	    	@surinuthalapati
+    	    </a>, thank you for using our products, here you &#39;ll find the Material Dashboard Pro Angular: https://www.creative-tim.com/product/material-dashboard-pro-angular2, unfortunately, we don&#39;t have the Kit on Angular. Best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">24 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10281"></div>
+    
+
+<div class="comment " id="comment-10394">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/173361/thumba91b.jpg?1492032961" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">damian.chambers
+                    <ul>
+                    <li class = 'user-role downloaded' > downloaded</li>
+                    </ul>
+                <small>20 days ago</small>
+                </h4>
+            </div>
+            Hi, I am not sure if this was asked before. Is there an easy way to install in angular. <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10411" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='damian.chambers'
+    	    >
+    	    	@damian.chambers
+    	    </a>, thank you for your interest in working with our products, it&#39;s not really that easy because you have to create every jQuery component and so on. Please let us know if you start developing the product. Best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">20 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10394"></div>
+    
+
+<div class="comment " id="comment-10540">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">3472488667
+                    <ul>
+                    <li class = 'user-role downloaded' > downloaded</li>
+                    </ul>
+                <small>13 days ago</small>
+                </h4>
+            </div>
+            hi,i want to ask how to use class &quot;timeline&quot; in this theme? thanks <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10552" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='3472488667'
+    	    >
+    	    	@3472488667
+    	    </a>, thank you for using our products, please let us know where did you find this class. Best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">13 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10540"></div>
+    
+
+<div class="comment " id="comment-10575">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/287421/thumb45b5.jpg?1509323699" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">brayan.beraúnjaimes
+                <small>12 days ago</small>
+                </h4>
+            </div>
+            <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='moldovanst'
+    	    >
+    	    	@moldovanst
+    	    </a> Hello, Where you could find the style of the profile that you use in the comments, of which the edges are yellow and a yellow star. <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10580" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='brayan.beraúnjaimes'
+    	    >
+    	    	@brayan.beraúnjaimes
+    	    </a>, thank you for your interest in working with our products, that style is made only for our platform, it&#39;s not included in any product. All the best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">12 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10575"></div>
+    
+
+<div class="comment " id="comment-10594">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">dstraham
+                    <ul>
+                    <li class = 'user-role downloaded' > downloaded</li>
+                    </ul>
+                <small>11 days ago</small>
+                </h4>
+            </div>
+            The selectpicker plugin breaks a mobile-friendly feature. I can of course simply not use that plugin, but then the template doesn&#39;t display the SELECT with the base bootstrap styling. Instead, it looks the base styling has been edited or removed. 
+
+How can I disable this plugin and receive the base bootstrap styling for a SELECT instead? This change is really the only disappointment I have found with this template, but it&#39;s also a critical problem. <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10600" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='dstraham'
+    	    >
+    	    	@dstraham
+    	    </a>, thank you for using our product, please let us know about the incompatibility of the selectpicker plugin, maybe we&#39;ll find a solution. Or you can erase all the style for the &#39;.form-control.bootstrap-select&#39;. Hope that information helps you. Please let us know if we can help you with anything else. Best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">11 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10603" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">dstraham
+                    <ul>
+                    <li class = 'user-role downloaded' > downloaded</li>
+                    </ul>
+                </h4>
+            </div>
+            @moldovanst The issue is quickly apparent simply by viewing the plugin on their website via your cell phone. I took screenshots for you so you dont have to do it yourself.
+
+This is their &quot;before&quot; example and how it works prior to their plugin:
+https://i.imgur.com/ep4JVFn.png
+It is an interface that works on all cell phones and makes an otherwise small and difficult to use select much more accessible.
+
+This is their example AFTER their plugin is applied:
+https://i.imgur.com/4yjmYp0.png
+
+On a tiny cell phone screen, this is FAR from user friendly.
+
+We use bootstrap for it&#39;s a mobile first design. This plugin takes the design and makes it DESKTOP first. This shouldn&#39;t be!
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">11 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10594"></div>
+    
+
+<div class="comment " id="comment-10691">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="account-photo account-regular-user">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/297338/thumb49d8.jpg?1510623098" />
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="author">
+                <h4 class="username">wilo..lópez
+                <small>5 days ago</small>
+                </h4>
+            </div>
+            THE 79 COST, WILL COVER TO USE WITH MULTIPLE WEBSITES? <br>
+
+            <div class="comment-reply-btn">
+    		</div>
+    	</div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    				
+<div class="comment " id="reply-10699" >
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="account-photo account-product-owner">
+                <img class="photo photo-right" width="70" height="70" src="../../s3.amazonaws.com/creativetim_bucket/photos/154001/thumb065e.jpg?1501184024" />
+
+                    <div class="account-type" rel="tooltip" title="Product Owner">
+                        <i class="fa fa-star"></i>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="author">
+                <h4 class="username">moldovanst
+                    <ul>
+                    <li class = 'user-role owner' > owner</li>
+                    </ul>
+                </h4>
+            </div>
+            Hello <a class='card-user'
+    	       rel='popover'
+    	       data-content='<div class="uil-ring-css" style="-webkit-transform:scale(0.3)"><div></div></div>'
+    	       data-initialized='0'
+    	       data-html='true'
+    	       data-placement='top'
+    	       data-template='<div class="popover" onmouseover="clearTimeout(timeoutObj);$(this).mouseleave(function() {$(this).hide();});"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+    	       data-username='wilo..lópez'
+    	    >
+    	    	@wilo..lópez
+    	    </a>, thank you for your interest in working with our products, please read carefully the license page: https://www.creative-tim.com/license, here you have all the information that you need. No, you will need to buy Developer License to build multiple websites. All the best, Stefan
+        </div>
+
+        <div class="col-md-2 text-right">
+            <h5 class="time">5 days ago</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="last-reply-10691"></div>
+<div id="last-comment-46"></div>
+
+                                    <div class="text-center" data-turbolinks="false">
+                                        <div class="pagination pagination-azure pagination-no-border " is_active="true"><a class="previous_page" rel="prev" href="https://www.creative-tim.com/product/material-kit-pro?page=11#comments">«</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=1#comments">1</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=2#comments">2</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=3#comments">3</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=4#comments">4</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=5#comments">5</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=6#comments">6</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=7#comments">7</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=8#comments">8</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=9#comments">9</a> <a href="https://www.creative-tim.com/product/material-kit-pro?page=10#comments">10</a> <a rel="prev" href="https://www.creative-tim.com/product/material-kit-pro?page=11#comments">11</a> <em class="current">12</em> <span class="next_page disabled">»</span></div>
+                                    </div>
+                                </div>
+                        <div id="last-comment-46"></div>
+                            <h4 class="post-comment-info">You have to be logged in to post a comment.
+                                <a href="javascript:void(0)" onclick="openLoginModal();" role="button" data-toggle="modal">
+                                    Login here.
+                                </a>
+                            </h4>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+                <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <div class="sharing-area">
+            <div class="big-icon">
+                <i class="icon-comments"></i>
+            </div>
+            <h2 class="legend text-center">Sharing is caring!</h2>
+
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-prosrc=sdkpreparse" class="fb-xfbml-parse-ignore btn btn-new btn-wd btn-social btn-facebook btn-fill btn-round" onclick="shareFacebookWithCallBack()">
+                <i class="fa fa-facebook-square"></i> Facebook
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/material-kit-pro&amp;text=Checkout%20this%20awesome%20product%20for%20web%20developers&amp;via=creativetim" class="btn btn-new btn-wd btn-social btn-twitter btn-fill btn-round">
+                <i class="fa fa-twitter"></i> Twitter
+            </a>
+            <a href="javascript:void(0)" class="btn btn-new btn-wd btn-social btn-google btn-fill btn-round" onclick="googleShare(this)">
+                <i class="fa fa-google-plus-square"></i> Google+
+            </a>
+             <a href="https://www.creative-tim.com/cdn-cgi/l/email-protection#a39cd0d6c1c9c6c0d79ee0cbc6c0c8ccd6d783d7cbcad085c1ccc7da9eebca8fea83c5ccd6cdc783d7cbcad083c2cdc783d7cbccd6c4cbd783daccd683cecac4cbd783cfcac8c683cad783cbd7d7d3d0998c8cd4d4d48dc0d1c6c2d7cad5c68ed7cace8dc0ccce8cd3d1ccc7d6c0d78ccec2d7c6d1cac2cf8ec8cad78ed3d1cc" class="btn btn-new btn-wd btn-social btn-neutral btn-email btn-fill btn-round">
+                <i class="fa fa-paper-plane"></i> Email
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="main main-purple section-feedback parallax  parallax-" style="background: url('https://s3.amazonaws.com/creativetim_bucket/products/46/mk_pro_cover.jpg?1515776561')no-repeat;background-size: cover; ">
+            <div class="container">
+                <div class="testimonials">
+                    <h4 class="legend text-center">Why our customers appreciate us</h4>
+                        <div class="col-md-4">
+    <div class="card" itemprop="review" itemscope itemtype="http://schema.org/Review">
+        <div class="content">
+            <div class="rating-stars rating-just-view" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="ratingValue" content="5">
+                <input type="number" class="rating" data-min="1" data-max="5" value="5" disabled="disabled" />
+            </div>
+
+            <h3 class="small-title" itemprop="name">
+                Design Quality
+            </h3>
+
+            <h4 class="message" itemprop="description">Beautiful Design, I love it!</h4>
+
+            <div class="footer">
+               <div class="author">
+                   <a class="card-link">
+                       <img class="avatar" src="../../s3.amazonaws.com/creativetim_bucket/photos/402343/thumb8324.jpg?1523735738" />
+                      <span itemprop="author">Nils Domin</span>
+                   </a>
+               </div>
+               <div class="stats pull-right">
+                   <meta itemprop="datePublished" content="2018-09-15">3 days ago
+               </div>
+               <div class="clearfix"></div>
+           </div>
+
+        </div>
+    </div>
+</div>
+
+                        <div class="col-md-4">
+    <div class="card" itemprop="review" itemscope itemtype="http://schema.org/Review">
+        <div class="content">
+            <div class="rating-stars rating-just-view" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="ratingValue" content="5">
+                <input type="number" class="rating" data-min="1" data-max="5" value="5" disabled="disabled" />
+            </div>
+
+            <h3 class="small-title" itemprop="name">
+                Design Quality
+            </h3>
+
+            <h4 class="message" itemprop="description"></h4>
+
+            <div class="footer">
+               <div class="author">
+                   <a class="card-link">
+                       <img class="avatar" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+                      <span itemprop="author">Nicolas Hoffmann</span>
+                   </a>
+               </div>
+               <div class="stats pull-right">
+                   <meta itemprop="datePublished" content="2018-09-14">4 days ago
+               </div>
+               <div class="clearfix"></div>
+           </div>
+
+        </div>
+    </div>
+</div>
+
+                        <div class="col-md-4">
+    <div class="card" itemprop="review" itemscope itemtype="http://schema.org/Review">
+        <div class="content">
+            <div class="rating-stars rating-just-view" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="ratingValue" content="4">
+                <input type="number" class="rating" data-min="1" data-max="5" value="4" disabled="disabled" />
+            </div>
+
+            <h3 class="small-title" itemprop="name">
+                Design Quality
+            </h3>
+
+            <h4 class="message" itemprop="description"></h4>
+
+            <div class="footer">
+               <div class="author">
+                   <a class="card-link">
+                       <img class="avatar" src="../../s3.amazonaws.com/creativetim_bucket/anonymous_thumb.png" />
+                      <span itemprop="author">Anonymous Tim</span>
+                   </a>
+               </div>
+               <div class="stats pull-right">
+                   <meta itemprop="datePublished" content="2018-09-04">14 days ago
+               </div>
+               <div class="clearfix"></div>
+           </div>
+
+        </div>
+    </div>
+</div>
+
+
+                        <div class="clearfix"></div>
+                        <div class="text-center" data-turbolinks="false">
+                            <a class="btn btn-new btn-neutral btn-round" href="https://www.creative-tim.com/product/material-kit-pro/reviews">View All Reviews</a>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-grey">
+            <div class="container product gallery">
+                <h4 class="legend">Built with Material Kit Pro</h4>
+    <!--             Cristina: de pus conditie sa fie doar 3 -->
+                <div class="row">
+                            <div class="col-md-4">
+                                <a target="_blank" href="http://clevercat.io/">
+                                    <img class="img-responsive img-rounded" src="../../s3.amazonaws.com/creativetim_bucket/galleries/photos/000/000/869/thumb/495b0.jpg?1512568692" />
+</a>                            </div>
+                            <div class="col-md-4">
+                                <a target="_blank" href="http://mapletonchorale.org/">
+                                    <img class="img-responsive img-rounded" src="../../s3.amazonaws.com/creativetim_bucket/galleries/photos/000/000/742/thumb/Captur%c4%83_de_ecran_din_2017.09.25_la_12.45.42b644.png?1506332779" />
+</a>                            </div>
+                            <div class="col-md-4">
+                                <a target="_blank" href="http://stayaleeve.org/">
+                                    <img class="img-responsive img-rounded" src="../../s3.amazonaws.com/creativetim_bucket/galleries/photos/000/000/741/thumb/Captur%c4%83_de_ecran_din_2017.09.25_la_12.44.14b51e.png?1506332694" />
+</a>                            </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-5">
+                        <a class="btn btn-info btn-block btn-fill" href="https://www.creative-tim.com/gallery/material-kit-pro">See the Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="main-white">
+        <div class="container">
+            <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" >
+                <a itemprop="item" href="https://www.creative-tim.com/">
+                <span itemprop="name">Home</span>
+                </a>
+
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" >
+                <a itemprop="item" href="https://www.creative-tim.com/bootstrap-themes">
+                <span itemprop="name">All Categories</span>
+                </a>
+
+            <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class=&quot;active&quot;&gt;>
+                <span itemprop="name">Material Kit Pro</span>
+
+            <meta itemprop="position" content="3" />
+        </li>
+</ol>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade reviews-modal" id="reviewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+
+              <td>Material Kit Pro</td>
+              <td>Dani Fanton</td><br>
+              <td>message:Easy to use, very flexible, amazing code quality and a good documentation. I highly recommend this kit.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Fu Thai Chi</td><br>
+              <td>message:I am in love with the material kit! Been using it for multiple projects and it&#39;s just downright awesome.
+
+Thanks guys!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mike Goth</td><br>
+              <td>message:Love it! I wanted to customize the scss files and Alex helped with very quick support.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Like it!!!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Travis Moks</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>yash goyal</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anggi Fratriyan</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Nguyễn Bá Tân</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Yauri</td><br>
+              <td>message:The performance is very bad in mobile browser.</td>
+              <td>rating:3</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jonas Dahmen</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Filbert Jonathan</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Colin Arenburg</td><br>
+              <td>message:Love the product - it&#39;s great</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Eugeney Dubrovin</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Tiago Mendes</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Kevin Andrey Bueno Solano</td><br>
+              <td>message:Its a great KIT, nothing problem, only I would like a little more of documentation about add and change the differents items.
+
+Thanks so much.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Guy Oren</td><br>
+              <td>message:I like the design....</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Christopher Hoegner</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Caroline Suchodolski</td><br>
+              <td>message:Best product !</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Muhammad Sumon Molla Selim</td><br>
+              <td>message:As awesome like other Creative Tim products. Material looks cooler than many other templates available in market and nice example templates ready to start development rapidly.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Denis Priebe</td><br>
+              <td>message:This is by far the most impressive UI Kit I have ever worked with. It&#39;s....sooooo....beautiful...
+Thanks Creative Tim!!!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Vishwas J</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:I love the product, it is easy to implement.
+
+My only criticism would be that it is still difficult to add my own custom color pallet for the danger/warning/error/info/success/(and your rose) suites. The code should be written in such a way that I can simply amend an array with a HEX color code and a name and regenerate the SASS scripts to have btn-STEPHAN as an option too.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Chris de Lang</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Damir Fakhriev</td><br>
+              <td>message:Quality code, good documentation, but for some reason Bootstrap styles integrated separately. It&#39;s weird.</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Great design, very easy to use!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Vipin Lahoti</td><br>
+              <td>message:I was looking for Bootstrap and Material combo and landed here to use it for our SAAS product.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Bob</td><br>
+              <td>message:Not only do I love the design but the main thing I love is the fact that the creative tim staff and - for me personaly - Alex stay to their word when they say &quot;premium support&quot;.
+Answers are quick, helpfull and most of the time great solutions.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Gregor Richardson</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Cho Sunyoung</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>alex vl</td><br>
+              <td>message:Nice work, guys!) </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Brian Díaz</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Yu Zhang</td><br>
+              <td>message:I like this material kit so much, perfect bootstrap 3 theme</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>William Lawrence</td><br>
+              <td>message:Amazing design, very fast and customizable!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Aravindh S</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Rob Milnes</td><br>
+              <td>message:As a whole - this is just fantastic, in every way, shape and form.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>nam ly</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Verry Good quality</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Frédéric Leleu</td><br>
+              <td>message:A great product, very easy to use !</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Edwin Arellano</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Matt Silverman</td><br>
+              <td>message:This kit is great! It builds off of bootstrap, which most developers already knows, and adds the awesomeness known as Material Design! Great job, to the whole Creative-Tim team!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Awesome</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Ridvan Aliu</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:I think it&#39;s pretty nice, also I expected more updates :D</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Luljan Bacaj</td><br>
+              <td>message:What I like about the Creative Tim bootstrap themes is that they dont jam in a million libraries just a few you need to get the UI/UX done. This keeps the app relatively fast, most other themes out there try to throw everything and the kitchen sink in.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Justin Eakins</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Russ White</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Zach Kinsey</td><br>
+              <td>message:My original review was nasty for all the wrong reasons, these guys got back to me about my issue and resolved it very quickly. I had an issue after buying the Material Kit Pro product where I would attempt to download it from the dashboard and receive a &quot;No file&quot; message. Due to this, I quickly made assumptions as to what was going on and ended up making a butt out of myself. Checked out the product, highly recommended.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:best thing</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>yaooxx King</td><br>
+              <td>message:it gives me as much as I want, so awesome,thanks</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Henrique Faria</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Obaid Paracha</td><br>
+              <td>message:Awesome the colored shadows are perfect</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Will Zahra</td><br>
+              <td>message:Fantastic product - this has saved me so much time and it&#39;s such high quality!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Omer Faruk Ozdemir</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:The design is great!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>John Egan</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Wojtek Grabski</td><br>
+              <td>message:Not as happy with the PRO as I was with the Free.  The SASS version has a lot of undocumented/orphaned files, and so it&#39;s hard to customize.</td>
+              <td>rating:3</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Cristina</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Edrees Jalili</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Barry Chapman</td><br>
+              <td>message:outstanding package! great sellers, very well architected and documented piece of software!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>proteasa dan catalin</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Another epic kit! I am always blown away by Creative-Tim! Glad I can finally upgrade to Material Kit PRO!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Tumur Bazarragchaa</td><br>
+              <td>message:Very well designed product and it saves me a lot of time to get things done.
+Thank you so much.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Greg Davids</td><br>
+              <td>message:This made it so easy for me to get a great looking site up and running. Thanks Creative Tim!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>David Uli</td><br>
+              <td>message:Nice Clean Design.  Easy to implement and very flexible.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mike M</td><br>
+              <td>message:Amazing product, UI Kits can&#39;t get any better than this. Keep up the great work!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Seriously awesome</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>博闻 张</td><br>
+              <td>message:What a genius design!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Abdul Muqsit</td><br>
+              <td>message:I am working on a CRM+Web portal and i can&#39;t find any alternative of Material Kit Pro. One of the fastest and user friend responsive framework.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>john white</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Chase Jackson</td><br>
+              <td>message:I&#39;m newer to the front-end... With my creative side lacking in experience this really put me in the right spot to speed through the fast lane. I love this Design kit so much!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Weldys Santos</td><br>
+              <td>message:It&#39;s so easy to customize and so versatile template</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Andonette Wilkinson</td><br>
+              <td>message:Beautiful design and so simple to integrate and tweak if you are familiar with Bootstrap. </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Christina Thum</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jacob Bédard</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Nikita TURKMEN</td><br>
+              <td>message:i like it.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Rosen Tihomirov</td><br>
+              <td>message:Awesome product. Keep it up</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Luiz Antonio Batista da Silva</td><br>
+              <td>message:Wow!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mark Png</td><br>
+              <td>message:Best documentation ever!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Nido Molejon</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jim Meijer</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:It is the best product/Kit in the world for web Developers with wide range of good quality components .</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:this is awesome ... good docs easy tracking </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Andrew Geddes</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Hugh Dougherty</td><br>
+              <td>message:One of the best Bootstrap Material Design kits I&#39;ve used.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Dustin Katterbach</td><br>
+              <td>message:Well Coded and Designd but i would love to see more typical Material Design elements like a Snackbar/Toast or Badges. Keep going :) i love it.</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Luc De haas</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Love it</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Magnus Boye</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Myllse Merrill Casiple</td><br>
+              <td>message:Splendid!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>NGO THANH TUNG</td><br>
+              <td>message:Good template</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:I personally really like the Material Kit Pro. It&#39;s the best and most complete Bootstrap based theme i&#39;ve seen so far.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Cristi Jora</td><br>
+              <td>message:Simply awesome as always</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jon Haro</td><br>
+              <td>message:Awesome template, great design and customizability!</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>adisorn wisuttipat</td><br>
+              <td>message:cool</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Awesome Product!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Loh Tong Hong</td><br>
+              <td>message:Prolly one of the best template you&#39;ll ever find out in the wild !!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Miguel Narciso Muniz Rivera</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Sumit Saha</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Nice Solution</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Beautifully designed components.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Excelent user experience, I love it!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Awesome designed product. All components are top class</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Germán Martínez López</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>CJ Sturgess</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mark Webster</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Alberto Rodríguez Merino</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Stylish Amankwah</td><br>
+              <td>message:I really like your product</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Marta Noya</td><br>
+              <td>message:Great job! Thanks!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:It&#39;s cool</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Save Developers&#39; Life!! :)</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mateusz Kiliński</td><br>
+              <td>message:Best theme I&#39;ve ever bought!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mohammed Affan</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Shahram Soboutipour</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Kapil Viren Ahuja</td><br>
+              <td>message:simply awesome. Allowed us to build the sites with superior quality very fast</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Fantastic design! Your team is wonderful.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Javier Vidal Otero</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Raphael Arias</td><br>
+              <td>message:You could integrate the code base for the dashboard into one product, it would be awesome.
+
+The coloured shadows and perspective cards is just amazing!
+
+In general good code quality, I like a lot your products. Great design.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:1</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Dustin Nielson</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Purchased but the ZIP is corrupt. I am sure it is good once we can get it. Here&#39;s video of download process: http://screencast-o-matic.com/watch/cbh0cOXBNO Once this is resolved, I&#39;ll update the review.</td>
+              <td>rating:1</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Best</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Christopher Cain</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Andrew Kalek</td><br>
+              <td>message:It feels like it&#39;s not fully baked. Some of the UI doesn&#39;t work. The CSS class names are very depended for the demo page and aren&#39;t very useful in actual production use. Don&#39;t get me wrong, it&#39;s an awesome template, but like Light Bootstrap Dashboard Pro, it will take time before they fix all the bugs.</td>
+              <td>rating:3</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Marian Pavel</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:I have started and created initial pages very quickly. Code is very clean and I am able to understand and customize it without any efforts.
+Thanks for great theme.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Provides a great looking UI for your app.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Suhas Ghodke</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>JS Ong</td><br>
+              <td>message:Elegant design, very easy to use. Awesome! </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jon Shayler</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Rahul Lakhaney</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Fernando Medeiros</td><br>
+              <td>message:Beauty Kit</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Daniel Tudor</td><br>
+              <td>message:Perfect design and page structure for the project</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Tiago Boross de Oliveira</td><br>
+              <td>message:Fantastic and easy to use.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Quite frankly the best kick starter out there for websites The best LEGO system for building good looking websites on the market.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Reid Plumlee</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>润 劳</td><br>
+              <td>message:so good</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Neeraj Dana</td><br>
+              <td>message:Dear Alex 
+First of all you and your team is awesome and your stuff are marvelous
+Kindly help me if i would stuck somewhere 
+i want to design a ecommerce website for my self with material kit pro 
+
+your help will always be admired like your products</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>pavel malos</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Nice product!! Great design my project looks awesome!!!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Awesome . I just love it</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Osvalds Ozolnieks</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:AMAZING</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Beautiful UI; Intuitive UX</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Cüneyt Yüksel</td><br>
+              <td>message:That is awesome!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>WAGNER DE ANDRADE PERIN</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mehdi Salem</td><br>
+              <td>message:Turbo charged theme!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>David Rodríguez López</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Lee Johnson</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jorden Willemsen</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Peter Daniel Phua</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Very good!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Malik Dixon</td><br>
+              <td>message:The design quality of this product is excellent. Well thought out for designer or developer to assist their clients. </td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Malik Dixon</td><br>
+              <td>message:The design quality of this product is excellent. Well thought out for designer or developer to assist their clients. </td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:amazing design and easy to handle, used it in my website ppartyp.com</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jeff Whitfield</td><br>
+              <td>message:The thing I like about this one is that they managed to add all the subtle Material Kit style animations with little weight added to the performance. Only thing I really wish for though: Bootstrap 4 compatibility!  :P</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:love this!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Dean Stokes</td><br>
+              <td>message:Really nicely put together and excellent support on the site.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Petros Kyladitis</td><br>
+              <td>message:Great UI kit!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Lee Fenlan</td><br>
+              <td>message:Very good looking and easy to use</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Hardeep Asrani</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Stuart Bain</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Love this!</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Oskar Arce</td><br>
+              <td>message:Awesome!!!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Suwicha Phuak-im</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>fiona lv</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>William Taylor</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Miyuru Sagarage</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:This made my life so much easier.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Josef Katič</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Ivar Hernández González</td><br>
+              <td>message:Amazing utility, im really satisfied </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:The most awesome and stunning bootstrap UI kit on the web. I Just love it.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Marco Antonio Ribeiro</td><br>
+              <td>message:Awesome kit. Good design, easy to use and customize!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Ricardo Mendes</td><br>
+              <td>message:Overall extremely happy with the quality, design and code wise.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Design is beautiful with good documentation.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Robert Dennis</td><br>
+              <td>message:A must have for any lover of material design.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Uwe Picker</td><br>
+              <td>message:A great looking Template and even Bootstrap make it easy to handle, Thanks a lot!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>SAM BLACK</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>SAM BLACK</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Abu Azzam Heriyanto</td><br>
+              <td>message:Nice product</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Fantastic Layout!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Michalis Saviolidis</td><br>
+              <td>message:Amazing work! Very organized code with awesome components and a beatiful design!!!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:It has all the elements I need.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Ricky Frencken</td><br>
+              <td>message:Very nice design and easy to use.</td>
+              <td>rating:3</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Norman Braun</td><br>
+              <td>message:It saves a lot of time. Easy to use.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Farhad Aghababaei</td><br>
+              <td>message:Everything is good, I think if you add Fresh bootstrap table to material kit or other kit, It will be great.</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Ricardo Smarzaro</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mohamed-Ikbel Ghouraba_Fr</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Michal Malec</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Kory Marks</td><br>
+              <td>message:Parallox scolling image is not working correctly in Chrome. The image randomly goes to the middle of page instead of staying at the top. </td>
+              <td>rating:1</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>A S M SHAFIUL Kabir</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:The theme is very detailed and is good for most use cases.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Robert</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Larissa Klein</td><br>
+              <td>message:Benutz ich die ganze Zeit und ist bequem, nur fehlen mir manche Funktionen.</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Great bundle, its complete value for money. Just go for it!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Chen Michael</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Michal Birecki</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:A very extensible app for many cases, aweasome work!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>FELIPE SOLIS</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Scott</td><br>
+              <td>message:Very nice template.</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Really simple to go from idea to working product that looks great. Amazing looking components, beautiful design, the works.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Dimitris Rouvalis</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>César García Acebal</td><br>
+              <td>message:Really accurate Material design kit.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>N P</td><br>
+              <td>message:Brilliant development kit for smaller-scale responsive applications and/or quick prototypes. Code is easy to follow and documentation is very clean.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Max Chernyavsky</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jackson Yeager</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:love material design</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Julaine Scott</td><br>
+              <td>message:The code is well laid out; the organization is well done. I found this template to be a pleasure to use.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Niket Malik</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Lord Antulov - Fantulin</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Sergi Carneros</td><br>
+              <td>message:Very good theme, waiting for bootstrap 4 and/or Angular 2+ version.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Pathompong T</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:This premium product is so well built in terms of design and code. Frequent updates with improvements as well as easy Implementation with good documentation and great customizability make this product preferable over the free version.
+Thanks Creative Tim!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Really nice kit.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Павел Валентов</td><br>
+              <td>message:Outstanding kit</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Maher Ben Taleb Ali</td><br>
+              <td>message:Good Maintenance.
+Very Good Design</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Beautiful design</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Luis Yair Miranda Gonzalez</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Alison Williams</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:very good</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Joel</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:very good design :)</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Allwyn kent keeranchira joseph</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Ricardo Feria</td><br>
+              <td>message:I like the change to bootstrap 4</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:The most beautiful frame work to work with..... </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Paul</td><br>
+              <td>message:This is every developers dream fulfilled. Material Kit Pro couldn&#39;t have come at an appropriate time. Looking forward to way an awesome worry-free development of the front-end</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Excellent design which is suitable for many different situations.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anil Kumar</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Khushhal</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Finally, I found this High Quality Design Bootstrap Tool with proper documentation! Love it.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Jhonattan Santacruz</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Awesome design, great templates!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Chris Roberts</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Karyl Lamoureux</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Mate Visky</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Sean St. Heart</td><br>
+              <td>message:This is a wonderful template that&#39;s easy to use, looks absolutely great, and is well documented. </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Great docs and examples!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Invest Bots Limited</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Diego Villa</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Prabin Deka</td><br>
+              <td>message:Beautiful. Just an issue with SASS that needs to be solved. You cannot have mixins within another one, which you have done in your sass.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Евгений Алтухов</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:good design quality</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Кирилл Пензин</td><br>
+              <td>message:It&#39;s awesome! Anything that i need or may need are already implemented here! No. 1 for prototypes and pet-projects)</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>JP LeBlanc</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Tikhonov Oleg</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Almost perfect, but some bugs XD</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>KOUSHIK PAL</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Chris Weller</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>CharlieKAY Solid Culture</td><br>
+              <td>message:This is awesome, I had to go for the bundle but the only issue I have is that its psd instead of Sketch.</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:This is great</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>현준 김</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Kevin Zambrano</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Yin Kin Kwok</td><br>
+              <td>message:good looking template</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Alex Benfaremo</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Catherine Niñofranco</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:There are many serious bugs 
+1- datepicker not working within form tag
+it&#39;s continuously blinking.
+2- js code is uglyfy and i cannot change anything
+3- it&#39;s not working with webpack. it&#39;s showing popper issue.
+so many other issues </td>
+              <td>rating:2</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Patricio Andres Escobar Lopez</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>lu yong</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Brain Lab</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Diadal Diadal</td><br>
+              <td>message:wow great theme</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Viki Laforest</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Bui Tuan Kiet</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:great！</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Saaz Rai</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Simon Tseng</td><br>
+              <td>message:customizability could be more intiuitive</td>
+              <td>rating:3</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Abdellatif Landolsi</td><br>
+              <td>message:so beuatiful!</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Shaka Z</td><br>
+              <td>message:really easy to use thanks</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Taylor Nate</td><br>
+              <td>message:In my opinion the best UI kit in the market. 100% recommended.
+</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Kumar Vivek</td><br>
+              <td>message:Many of the components are not working please fix it. When can we expect some fixes?</td>
+              <td>rating:2</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Kristoffer Golde Ovesen</td><br>
+              <td>message:This product is just absolutely amazing. I don&#39;t have words :D</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:best</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:This is my go-to kit for any base HTML build - the ease of adding extra JS and PHP code to create extra functionality, and the speed of development is insane.  </td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:Amazing</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>andre van kempen</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Anonymous Tim</td><br>
+              <td>message:</td>
+              <td>rating:4</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Nicolas Hoffmann</td><br>
+              <td>message:</td>
+              <td>rating:5</td>
+
+
+              <td>Material Kit Pro</td>
+              <td>Nils Domin</td><br>
+              <td>message:Beautiful Design, I love it!</td>
+              <td>rating:5</td>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info btn-new btn-round" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-product-log" id="product-version-logs-modal-46" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+          <div class="modal-header text-center">
+               <h4> Updates and Changelogs</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+                     <h1>Change Log</h1>
+
+<h2>[2.1.0] 2018-06-29</h2>
+
+<h3>Bug fixing, Improvements</h3>
+
+<ul>
+<li>solved responsive issues</li>
+<li>Updated plugins</li>
+<li>Multilevel dropdown integration</li>
+<li>Small changes for responsive devices</li>
+<li>Fixed-plugin in user archive integration</li>
+<li>Shopping Cart page</li>
+<li>Speed optimizations</li>
+<li>Documentation errors fixed</li>
+<li>Gulp compiling of the SASS files</li>
+<li>Change versions on CSS and JS files</li>
+<li>Small changes for components</li>
+</ul>
+
+<h2>[2.0.3] 2018-02-20</h2>
+
+<h3>Bug fixing, Improvements</h3>
+
+<ul>
+<li>added scroll to id in Section Page</li>
+<li>change the demo.css/demo.js files to run the project without them</li>
+<li>resize the modal on devices to fit the page</li>
+<li>change the name and the route in the gulpfile.js file in the users archive</li>
+<li>in the html pages the path from images was changed</li>
+<li>we changed the path of images from <code>assets/img</code> folder</li>
+</ul>
+
+<h2>[2.0.3] 2018-02-12</h2>
+
+<h3>Improvements, Bootstrap 4.0.0 update</h3>
+
+<ul>
+<li>Reestablish the gulp compiling of the SASS files</li>
+</ul>
+
+<h2>[2.0.1] 2018-01-31</h2>
+
+<h3>Bug fixing, Improvements</h3>
+
+<ul>
+<li>Added two plugins in Documentation</li>
+<li>Included gulp task that opens the project in browser</li>
+<li>Reestablish the routes for some Documentation Components</li>
+<li>responsive issue fixed for carousel</li>
+</ul>
+
+<h2>[2.0.0] 2018-01-12</h2>
+
+<h3>Bootstrap 4 update</h3>
+
+<ul>
+<li>Core base code on Bootstrap 4</li>
+<li>Documentation code base written from scratch</li>
+<li>Speed optimizations</li>
+<li>Class changes : .card-block to .card-body</li>
+<li>.navbar-toggleable-* to .navbar-expand-*</li>
+<li>.hidden-<em>-down to .d-none .d-</em>-block</li>
+<li>.hidden-<em>-up to .d-</em>-none</li>
+<li>.checkbox to .form-check</li>
+<li>.radio to .form-check</li>
+<li>more class changes here:https://medium.com/@lukaszholeczek/how-to-upgrade-bootstrap-4-alpha-6-to-bootstrap-4-beta-d43b4210f2a3</li>
+<li>Bug fixes for responsive devices</li>
+<li>Small changes for components</li>
+</ul>
+
+<h2>[1.2.1] 2017-11-09</h2>
+
+<h3>BugFixing</h3>
+
+<ul>
+<li>fixed parallax page scroll</li>
+<li>fixed cards from <code>ecommerce.html</code> page</li>
+</ul>
+
+<h2>[1.2.0] 2017-09-13</h2>
+
+<h3>BugFixing</h3>
+
+<ul>
+<li>jQuery library update to the latest version</li>
+<li>removed atv-img-animation.js library ( multiple problems with the browsers )</li>
+<li>fixed rotating card system for IE, changed rotating cards with raised image with regular cards with background image or plain cards</li>
+<li>bootstrap-selectpicker.js updated to the latest version</li>
+</ul>
+
+<h2>[1.1.1] 2017-05-22</h2>
+
+<h3>BugFixing</h3>
+
+<ul>
+<li>fixed problem with Morphing Cards(rotating manual and auto) and Perspective Cards when images were loading later than the javascript</li>
+</ul>
+
+<h2>[1.1.0] 2017-04-14</h2>
+
+<h3>BugFixing, Plugins Updates, New Cards (HTML Version)</h3>
+
+<ul>
+<li>v1.1.0 14 Apr, 2017 -</li>
+<li>Bootstrap v3.3.7</li>
+<li>Bootstrap DateTimePicker v4.17.45</li>
+<li>Replace Bootstrap SelectPicker v1.11.2</li>
+<li>Replace Tags with Bootstrap TagsInput v0.8.0</li>
+<li>jQuery.Flexisel v2.1.0</li>
+<li>NoUiSlider v9.0.0</li>
+<li>jQuery v3.1.1</li>
+<li>moment.js v2.14.1</li>
+<li>Added new cards</li>
+<li>Added 3D animation effect for images on cards(atvImg library)</li>
+<li>Added DynamicShadows</li>
+<li>Added New rotating cards</li>
+<li>Added Ecommerce Page</li>
+<li>Bug fixing</li>
+<li>Documentation Updates</li>
+<li>Added simple input example</li>
+</ul>
+
+<p>IMPORTANT! If you migrate from V1.0.0 to V1.1.0 please make sure your replace the &#39;.content&#39; class inside each card with &#39;.card-content&#39;, we&#39;ve made this adjustment for a better control of the content that is inside a card. Sorry for the inconvenience.</p>
+
+<h2>[1.0.0] 2016-06-15</h2>
+
+<h3>Initial Release</h3>
+
+            </p>
+          </div>
+          <div class="modal-footer small-footer">
+            <button type="button" class="btn btn-default btn-simple btn-block" data-dismiss="modal">Close</button>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="live-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="row">
+                    <div class="col-md-5">
+                        <a href="#" class="btn btn-info btn-fill pull-left" id="src-for-tim" type="button">
+                            Start with this design
+                        </a>
+                        <a href="#" class="btn btn-default btn-simple pull-left" id="src-for-live" target="_blank">
+                            View original url
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <div class="footer-title ">
+    <div class="container">
+       <div class="row">
+           <div class="col-sm-8">
+             <h1 class="title">Join our newsletter and receive weekly news!</h1>
+           </div>
+            <form html="{:multipart=&gt;true}" class="form-inline" action="https://www.creative-tim.com/newsletter" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+                <div class="col-sm-6 col-md-2">
+                    <input type="email" name="subscribe_email" id="subscribe_email" class="form-control" placeholder="Enter Email" />
+                </div>
+                <div class="col-sm-6 col-md-2">
+                    <input type="submit" name="commit" value="Sign Up" class="btn btn-info btn-round btn-fill btn-block" data-disable-with="Sign Up" />
+                </div>
+</form>        </div>
+    </div>
+</div>
+
+  
+<div class="footer">
+    <div class="overlayer">
+    <div class="container">
+        <div class="row support">
+            <div class="col-sm-3 col-xs-4">
+                <h4>Creative Tim</h4>
+                <ul class="list-unstyled" data-turbolinks="false">
+                    <li> <a href="http://blog.creative-tim.com/">Blog</a></li>
+                    <li> <a href="https://www.creative-tim.com/bootstrap-cheat-sheet">Bootstrap Cheat Sheet</a></li>
+                    <li> <a href="https://www.creative-tim.com/affiliates/new">Affiliate Program</a></li>
+                    <li> <a href="https://www.creative-tim.com/terms">Terms &amp; Conditions</a></li>
+                    <li> <a href="https://www.creative-tim.com/privacy">Privacy Policy</a></li>
+                    <li> <a href="https://www.creative-tim.com/faq">FAQ</a></li>
+                        <li> <a href="https://www.creative-tim.com/coupon">Get coupon</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-xs-4">
+                <h4>Proud of</h4>
+                <ul class="list-unstyled social-list">
+                    <li><h3 class="numbers-dont-lie"><b>527,985</b> accounts</h3></li>
+                    <li><h3 class="numbers-dont-lie"><b>933,209</b> downloads</h3></li>
+                    <li><h3 class="numbers-dont-lie"><b>124</b> sponsored events</h3></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-xs-4">
+                <h4>Help and Support</h4>
+                <ul class="list-unstyled" data-turbolinks="false">
+                    <li><a href="https://www.creative-tim.com/presentation">Presentation</a></li>
+                    <li><a href="https://www.creative-tim.com/about-us">About Us</a></li>
+                    <li><a href="https://www.creative-tim.com/contact-us">Contact Us</a></li>
+                    <li><a href="https://www.creative-tim.com/sponsorships">Sponsorships</a></li>
+                    <li><a href="https://www.creative-tim.com/license">Licenses</a></li>
+                    <li><a href="https://www.creative-tim.com/gallery/get-shit-done-pro">Products Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-xs-12 text-center">
+                    <h4>Latest News</h4>
+                     <a
+                     class="twitter-timeline"
+                     href="https://twitter.com/CreativeTim"
+                     data-widget-id="586445781978124289"
+                     data-chrome="noheader nofooter noborders noscrollbar transparent"
+                     height="200">
+                     Tweets by @CreativeTim</a>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="social-area text-center" itemscope itemtype="http://schema.org/LocalBusiness">
+                <a itemprop="url" href="https://www.creative-tim.com/" class="footer-brand">
+                    <div class="logo">
+                        <img itemprop="logo" src="../../s3.amazonaws.com/creativetim_bucket/new_logo.png" />
+                    </div>
+                    <span itemprop="name">Creative Tim</span>
+                </a>
+
+               <br/>
+                <a itemprop="sameAs" href="https://dribbble.com/creativetim" class="btn btn-default btn-social btn-round" rel="publisher" target="_blank"><i class="fa fa-dribbble"></i></a>
+                <a itemprop="sameAs" href="https://www.facebook.com/CreativeTim" class="btn btn-default btn-social btn-round" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a itemprop="sameAs" href="https://twitter.com/CreativeTim" class="btn btn-default btn-social btn-round" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a itemprop="sameAs" href="https://plus.google.com/+CreativetimPage" class="btn btn-default btn-social btn-round" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+
+                <a itemprop="sameAs" href="https://www.instagram.com/creativetimofficial/" class="btn btn-default btn-social btn-round" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a itemprop="sameAs" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" class="btn btn-default btn-social btn-round" target="_blank"><i class="fa fa-youtube"></i></a>
+                <a itemprop="sameAs" href="https://ro.pinterest.com/thecreativetim/" class="btn btn-default btn-social btn-round" target="_blank"><i class="fa fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="credits">
+                 &copy; 2018 Creative Tim, all rights reserved. Made with <i class="icon-heart heart" alt="love"></i> for a better web.
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+<script data-cfasync="false" src="https://www.creative-tim.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+ !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+ </script>
+
+
+  <script type="text/javascript">
+	
+
+    $().ready(function (){
+	    initTextareaForMention();
+
+	    $('.edit-comment-modal').on('shown.bs.modal', function () {
+		  	textarea = $(this).find('textarea.hidden').html();
+		  	$(this).find('textarea.mention').val(textarea);
+		})
+    });
+
+</script>
+
+  
+
+</body>
+
+
+
+<!-- Mirrored from www.creative-tim.com/product/material-kit-pro by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:53:54 GMT -->
+</html>

@@ -1,0 +1,50 @@
+#menu {
+    padding: 0;
+}
+
+ 
+#menu li {
+    display: inline;
+}
+  #menu li a {
+        
+        font-family: Arial;
+        font-size: 20px;
+        text-decoration: none;
+        float: right; /* ubicasion el lado derecho*/
+        padding: 20px; /* Tamaño del fondo de la letra*/
+        background-color: #2175bc;
+        color: #fff;
+    }
+    #menu li a:hover {
+        background-color: #2586d7;
+        margin-top: -5px; /* Tamaño suba*/
+        padding-bottom: 18px; /* Tamaño del fondo engrandesca*/
+    }
+
+#fondo {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('../imagen/314574.jpg');
+    background-size: 100% 100%;
+   
+}
+#login_titulo {
+    font-size: 60px;
+    color:aliceblue;
+}
+#login_letra {
+    color: aliceblue;
+}
+#login_letra_social {
+    color:cyan;
+}
+#registre_letra h3 {
+    font-size: 30px;
+}
+#registre_letra p {
+    font-size: 25px;
+}
+#registro_datos{
+    
+}

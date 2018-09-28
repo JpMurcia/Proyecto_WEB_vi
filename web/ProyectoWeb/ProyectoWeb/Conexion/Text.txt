@@ -1,0 +1,3 @@
+<connectionStrings>
+    <add name="Conexion" connectionString="Data Source=127.0.0.1;database=sigepi;uid=root;password=root" providerName="MySql.Data.MySqlClient.MySqlConnection"/>
+  </connectionStrings>

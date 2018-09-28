@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title> title</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"> <!--Iconos-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/hola.css">
+
+    <body id="cuerpo">
+    <ul id="menu">
+        <li align="right">Etiqueta menu con vinculos </li>
+
+        <li align="right">
+
+            <a href="register.html">Registrar||</a>
+            <a href="hotml1.html">hotmail1||</a>
+            <a href="login.html">login</a>
+
+        </li>
+        <li align="right">Etiqueta li(elemento del menu)</li>
+    </ul>
+
+    <div name="etiquetaH" style="color: 00000">
+        <center style="font-size: 40px">Etiquetas basicas con "center" </center>
+        <!-- tamaño de letra de 40 pixeles -->
+        <center>
+            <h1>soy etiqueta h1</h1>
+            <h2>soy etiqueta  h2</h2>
+            <h3>soy etiqueta  h3</h3>
+            <h4>soy etiqueta h4</h4>
+            <h5>soy etiqueta h5</h5>
+            <h6>soy etiqueta  h6</h6>
+            <p><em>soy etiqueta em(cursiva)</em> </p>
+            <p><u>soy etiqueta u(subrayado)</u></p>
+            <p>
+                <sup>soy una etiqueta sup</sup>(superindce) ejemplo = "m<sup>2</sup>"
+            </p>
+            <p><sub>soy una etiqueta sub</sub>(subindice) ejemplo ="(H<sub>2</sub>O)" </p>
+        </center>
+    </div>
+    <div align="center">
+        <h3>--------------------------------------------------------</h3>
+        <h1>Etiquetas Tabulable</h1>
+        <h2>Etiqueta table </h2>
+
+        <table border="1">
+
+            <colgroup span="5" class="columns"></colgroup>
+            <tr>
+                <!--  Representa una fila de celdas en una tabla.-->
+                <th>Countries</th>
+                <th>Capitals</th>
+                <th>Population</th>
+                <th>Language</th>
+                <th>etiqueta th(encabezado)</th>
+                <!--Representa una celda encabezado en una tabla. -->
+            </tr> 
+            <tr>
+
+                <td>USA</td>
+                <td>Washington D.C.</td>
+                <td>309 million</td>
+                <td>English</td>
+                <td>etiqueta td(datos de la tabla) 1</td>
+                <!--Representa una celda de datos en una tabla. -->
+            </tr>
+            <tr>
+                <td>Sweden</td>
+                <td>Stockholm</td>
+                <td>9 million</td>
+                <td>Swedish</td>
+                <td>etiqueta td(datos de la tabla) 2</td>
+            </tr>
+            <p> </p>
+        </table>
+
+    </div>
+
+
+    <div align="center">
+
+    <form border="0">
+
+        <fieldset>
+            <div>
+                <p></p>
+                <legend>Información Personal</legend>
+                <p></p>
+                Nombre:
+                <input name='nombre' type='text' tabindex='1'>
+                <p></p>
+            </div>
+            <div>
+                Apellidos:
+                <input name='apellidos' type='text' tabindex='2'>
+                <p></p>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>edad</legend>
+            <input type='checkbox' tabindex='20'
+                name='edad' value='20-39'>
+            20-39
+        <input type='checkbox' tabindex='21'
+            name='edad' value='40-59'>
+            40-59
+        <input type='checkbox' tabindex='22'
+            name='edad' value='60-79'>
+            60-79
+        </fieldset>
+
+    </form>
+
+    <!-- The second value will be selected initially -->
+
+
+    <select name="select">
+        <option value="value1">Value 1</option>
+        <option value="value2" selected>Value 2</option>
+        <option value="value3">Value 3</option>
+    </select>
+
+    <div>
+        <!-- Un simple ejemplo de un label con el atributo for -->
+        <label for="Name">Click me</label>
+        <input type="text" id="Name" name="Name" />
+    </div>
+    <!-- Aun mas simple -->
+
+    </div>
+
+</body>
+
+</html>
