@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `SIGEPI`.`grupo_inve_semillero` (
   `vision_grupo` VARCHAR(45) NULL,
   `justif_grupo` VARCHAR(45) NULL,
   `quien_somos_grupo` VARCHAR(45) NULL,
-  `grupo_inve_semillero_id_grupo` INT NOT NULL,
+  `grupo_inve_semillero_id_grupo` INT  NULL,
   PRIMARY KEY (`id_grupo`))
 ENGINE = InnoDB;
 
