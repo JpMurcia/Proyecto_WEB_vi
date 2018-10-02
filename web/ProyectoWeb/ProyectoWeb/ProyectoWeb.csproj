@@ -120,17 +120,17 @@
   <ItemGroup>
     <Content Include="Conexion\Text.txt" />
     <Content Include="Global.asax" />
-    <Content Include="Login\css\bootstrap-theme.css" />
-    <Content Include="Login\css\bootstrap-theme.min.css" />
-    <Content Include="Login\css\bootstrap.css" />
-    <Content Include="Login\css\bootstrap.min.css" />
-    <Content Include="Login\css\custom.css" />
-    <Content Include="Login\font-awesome\css\font-awesome.css" />
-    <Content Include="Login\font-awesome\css\font-awesome.min.css" />
-    <Content Include="Login\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="Login\js\bootstrap.js" />
-    <Content Include="Login\js\bootstrap.min.js" />
-    <Content Include="Login\js\npm.js" />
+    <Content Include="conteiner\css\bootstrap-theme.css" />
+    <Content Include="conteiner\css\bootstrap-theme.min.css" />
+    <Content Include="conteiner\css\bootstrap.css" />
+    <Content Include="conteiner\css\bootstrap.min.css" />
+    <Content Include="conteiner\css\custom.css" />
+    <Content Include="conteiner\font-awesome\css\font-awesome.css" />
+    <Content Include="conteiner\font-awesome\css\font-awesome.min.css" />
+    <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="conteiner\js\bootstrap.js" />
+    <Content Include="conteiner\js\bootstrap.min.js" />
+    <Content Include="conteiner\js\npm.js" />
     <Content Include="Login\login.html" />
     <Content Include="Login\register.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -393,15 +393,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Login\css\bootstrap-theme.css.map" />
-    <Content Include="Login\css\bootstrap-theme.min.css.map" />
-    <Content Include="Login\css\bootstrap.css.map" />
-    <Content Include="Login\css\bootstrap.min.css.map" />
-    <Content Include="Login\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="Login\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Login\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="Login\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Login\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="conteiner\css\bootstrap-theme.css.map" />
+    <Content Include="conteiner\css\bootstrap-theme.min.css.map" />
+    <Content Include="conteiner\css\bootstrap.css.map" />
+    <Content Include="conteiner\css\bootstrap.min.css.map" />
+    <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="conteiner\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Views\login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
