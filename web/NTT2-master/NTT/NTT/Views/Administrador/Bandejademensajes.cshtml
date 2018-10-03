@@ -1,0 +1,196 @@
+﻿@model NTT.Models.AdminModel
+@{
+    ViewBag.Title = "Bandejademensajes";
+    Layout = "~/Views/Shared/_index.cshtml";
+}
+
+<script>
+
+
+
+function esconderleidos(){
+   var elemento = document.getElementById("pendientes");
+   elemento.style.display = 'block';
+elemento =document.getElementById("leidos");
+elemento.style.display = 'none'; 
+
+
+}
+
+function esconderpendientes(){
+   var elemento = document.getElementById("leidos");
+   elemento.style.display = 'block';
+   elemento =document.getElementById("pendientes");
+   elemento.style.display = 'none';
+ 
+
+}
+</script>
+<style>
+    h6 { width: 60%;}
+
+</style>
+<section id="basic-form-layouts">
+    <div class="row match-height">
+        <div class="container">
+            <div class="container-fluid">
+                <!--CREAR-->
+                <div class="col-xl-3 col-lg-12">
+
+                    <div class="card-block">
+                        
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="container">
+                                            <div style="margin-left: 60px;">
+                                                <h5>MENU</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                  <ul class="nav nav-pills nav-stacked">
+                                    <li class="nav-item">
+                                        <a class="btn btn-warning btn-block" id="base-pillOpt21" data-toggle="pill" href="#pillOpt21" aria-expanded="true" onclick="javascript:esconderleidos(); ">PENDIENTES</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn btn-warning btn-block"  id="base-pillOpt22" data-toggle="pill" href="#pillOpt22" aria-expanded="false" onclick="javascript:esconderpendientes(); ">LEIDOS</a>
+                                    </li>
+                                      
+                                </ul>
+                         </div>
+                    </div>
+                </div>
+                <!--ELIMINAR-->
+                <div class="col-xl-9 col-lg-12">
+
+                    <br /><div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="container">
+                                    <div style="margin-left: 230px;">
+                                        <h5>BANDEJA DE MENSAJES</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                   
+                                
+                    </div>
+                </div>
+
+                <div class="col-xl-9 col-lg-12">
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <h5>Usuario</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Asunto</h5>
+                                 </div>
+                                <div class="col-md-2">
+                                    <h5>Estado</h5>
+                                </div>
+                                <div class="col-md-3">
+                                   <h5>Ver/Responder</h5>  
+                                 </div>
+
+                            </div>
+                        </div>
+                    </div><br />
+                    <div id="leidos" style="display: none">
+                        @{
+                            for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                            {
+                                var usuario = Model.temp.Tables[0].Rows[i]["usuarionombre"].ToString();
+                                var asunto = Model.temp.Tables[0].Rows[i]["asunto"].ToString();
+                                var mensaje = Model.temp.Tables[0].Rows[i]["descripcion"].ToString();
+                                var estado = Model.temp.Tables[0].Rows[i]["estado"].ToString();
+                                var ID = Model.temp.Tables[0].Rows[i]["idusuario"].ToString();
+                                var rol = Model.temp.Tables[0].Rows[i]["idrol"].ToString();
+                                var idm = Model.temp.Tables[0].Rows[i]["idmensaje"].ToString();
+                                if (estado == "Leido") {  
+                                <div class="card">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-2 .col-sm-4">
+                                                <h6>@usuario</h6>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>@asunto</h5>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                @{  
+                                                    <a>LEIDO</a>
+                                                    
+                                                }
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href=@Url.Action("responder","Administrador",new {usua=@usuario,men=mensaje,id=ID,Rol=rol,idmensaje=idm }) class="btn btn-info btn-icon btn-sm" data-original-title="" title="RESPONDER">
+                                                    ☑ <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                        }
+                                                    }
+                        }
+                    </div>
+                    <div id="pendientes" style="display: block">
+                        @{
+                            for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                            {
+                                var usuario = Model.temp.Tables[0].Rows[i]["usuarionombre"].ToString();
+                                var asunto = Model.temp.Tables[0].Rows[i]["asunto"].ToString();
+                                var mensaje = Model.temp.Tables[0].Rows[i]["descripcion"].ToString();
+                                var estado = Model.temp.Tables[0].Rows[i]["estado"].ToString();
+                                var ID = Model.temp.Tables[0].Rows[i]["idusuario"].ToString();
+                                var rol = Model.temp.Tables[0].Rows[i]["idrol"].ToString();
+                                var idm = Model.temp.Tables[0].Rows[i]["idmensaje"].ToString();
+                                if (estado == "No Leido") { 
+                                                                    <div class="card">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-2 .col-sm-4">
+                                                <h6>@usuario</h6>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>@asunto</h5>
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                
+                                                        <a> PENDIENTE</a>
+                                               
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href=@Url.Action("responder","Administrador",new {usua=@usuario,men=mensaje,id=ID,Rol=rol,idmensaje=idm }) class="btn btn-info btn-icon btn-sm" data-original-title="" title="RESPONDER">
+                                                    ☑ <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                            }
+                            }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+

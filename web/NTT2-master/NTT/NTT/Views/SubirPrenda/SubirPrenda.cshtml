@@ -1,0 +1,202 @@
+﻿@model NTT.Models.Prenda_Model
+
+@{
+    ViewBag.Title = "SubirPrenda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+
+</head>
+@using (Html.BeginForm("SubirPrenda", "SubirPrenda", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+     
+  
+        <style>
+            #in {
+                padding-top: -12px;
+            }
+            #colum {
+     padding-right: 50px;
+    padding-left: 10px;
+    margin-bottom:100px;
+
+
+}
+ #colum2 {
+    margin-bottom: 10px;
+
+    }
+ #colum3 {
+    margin-bottom: 10px;
+
+    }
+
+
+            #prin{
+                font-weight:bold;
+                padding-top:8px;
+
+            }
+            .bootstrap-select > .dropdown-toggle {
+                width: 60%;
+                padding-right: 10px;
+                 padding-left: 20px;
+                 display: block; 
+            }
+            #espe {
+              padding-right: 0px;
+            }
+            
+            h6, h4{
+            color:#35322E;
+            }
+             p, i , a, #inn{
+            color:#2A2826;
+        }
+          #ss, #tis{
+          color: #2A2826;
+
+        }
+            .checkbox label::before, .checkbox label::after {
+            background-color: rgb(183, 183, 183);
+            }
+            #obli{
+            color:red;
+            }
+         
+        </style>
+
+       <br /> <br /><br /><div style="margin-left: 250px;">
+            <div class="page-header-image" style="background-image:url(../../Content/assets/img/blurred-image-1.jpg")></div>
+
+             <div class="content-center">
+                
+                    <h5 id="prin" style="margin-left: 280px;">NUEVA PRENDA</h5>
+
+                    <div class="row">
+ 
+                        <div class="col-md-4">
+ 
+                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                <div class="fileinput-new thumbnail img-raised">
+                                    <img src="../../Content/assets/img/image_placeholder.jpg" alt="...">
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                <div>
+                                    <span class="btn btn-raised btn-round btn-default btn-file">
+                                        <span class="fileinput-new">Seleccionar imagen</span>
+                                        <span class="fileinput-exists">Elegir otra</span>
+                                        <input type="file" name="file">
+                                    </span>
+                                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="now-ui-icons ui-1_simple-remove"></i> Eliminar</a>
+                                </div>
+                            </div>
+                            <div class="row pick-size">
+                                <div class="col-lg-6 col-md-8 col-sm-6">
+                                    <h6>Precio<a id="obli">*</a></h6>
+                                    <div class="input-group border-input">
+                                        <br />
+                                        @Html.TextBoxFor(mod => mod.precio, new { @type = "text", @class = "form-control border-input", @placeholder = "", })
+                                        <span class="input-group-addon">$</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-8 col-sm-6">
+                                    <h6 style="margin:-3.5% 0;"><label>Genero<a id="obli">*</a></label></h6>
+                                    @Html.DropDownListFor(mod => mod.genero, new List<SelectListItem> { new SelectListItem() { Text = "M", Value = "M" }, new SelectListItem() { Text = "F", Value = "M" } }, "Seleccione", new { @type = "checkbox", @class = "selectpicker", @style = "select-with-transition btn btn-block" })
+ 
+                                </div> 
+                            </div>
+
+                        </div>
+                        <div class="col-md-6" >
+                            <div>
+                                <br>
+                                <h6>Nombre<a id="obli">*</a></h6>
+                                @Html.TextBoxFor(mod => mod.nombreprenda, new { @type = "text", @class = "form-control border-input", @placeholder = "Introduzca el nombre del producto aqui...", @onkeypress = "return soloLetras(event)" })
+                                <br /><br />
+                                <h6>Descripcion<a id="obli">*</a></h6>
+                                @Html.TextAreaFor(mod => mod.descripcion, new
+                           {
+                               @class = "form-control textarea-limited",
+                               @placeholder = "",
+                               @type = "textarea",  
+                               @rows = "13",
+                               @maxlength = "150",
+                               @id = "te"
+                           })<br /> 
+                                     <h6><label>Tallas<a id="obli">*</a></label></h6>
+                                  <div class="row pick-size" style="margin:1.5% 0;"id="colum2" >
+                                    <!--<div class="col-md-pull-5" style="margin:-1.5% 0;">-->
+                                                                            @{
+                                                                                int y = 0,m=0;
+                                                                                string nombre = "";
+                                                                                
+                                                                                for (int i = 0; i < Model.temp.Tables[0].Rows.Count+1; i++)
+                                                                                {
+                                                                                    <div class="col-lg-2 col-md-8 col-sm-2" style="margin:-2.5% 0;" id="colum"  > 
+                                                                                        <div class="col-md-pull-5" style="margin:-2.5% 0;" >
+                                                                                            @{
+                                                                                                if (i != 0)
+                                                                                                {
+                                                                                                    nombre = Model.temp.Tables[0].Rows[i - m]["nombretalla"].ToString();
+                                                                                                }
+                                                                                                //@Html.CheckBoxFor(mod => mod.talla[i])
+                                                                                                <div id="prin">
+                                                                                                    <label>@nombre</label>
+
+                                                                                            </div>
+                                                                                                
+                                                                                                <br />
+                                                                                                for (int j = 0; j < Model.temp2.Tables[0].Rows.Count; j++)
+                                                                                                {
+                                                                                                    if (i == 0)
+                                                                                                    {
+                                                                                                        m = 1;
+                                                                                                        <div id="prin">
+                                                                                                            @{ 
+                                                                                                            nombre = Model.temp2.Tables[0].Rows[j]["nombrecolor"].ToString();
+                                                                                                            <label>@nombre</label>
+                                                                                                            }
+                                                                                                        </div>
+
+                                                                                                    }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        <div id="colum2">
+
+                                                                                                            @Html.TextBoxFor(mod => mod.cantidad[y], new { @style = "width : 40px; heigth : 15px",@id="In" })
+                                                                                                        </div>
+                                                                                                         y++;
+                                                                                                    }
+
+                                                                                                }
+                                                                                            }
+                                                                                        </div>
+                                                                                    </div>
+                                                                                                }
+                                                                            }
+                                </div><br />
+                         
+                                 
+                             </div>
+                            <div style="margin-left: 150px;">
+                                <!--  end acordeon -->
+                                <input type="submit" class="btn btn-primary btn-block btn-success" value="Guardar y publicar" style="width : 200px" />
+                            </div>
+
+                            <br /><br /><br />
+                        </div>
+                     
+                     </div>
+
+ 
+           </div>
+
+    
+                 </div>
+                 
+                 
+    }
+
+ 

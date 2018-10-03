@@ -1,0 +1,66 @@
+﻿@model NTT.Models.AdminModel
+@{
+    ViewBag.Title = "Informaciongeneral";
+    Layout = "~/Views/Shared/_index.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+             <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="container">
+                            <div style="margin-left: 110px;">
+                                <h5>INFORMACIÓN DE LA ORGANIZACIÓN</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         <div class="content-body">
+          
+              <!-- Basic form layout section start -->
+            <section id="basic-form-layouts">
+                <div class="row match-height">
+                  
+                      <div>
+                        
+                        <div class="card">
+                            
+                            <div class="card-body collapse in">
+                                <div class="card-block">
+                                    @using (Html.BeginForm("Informaciongeneral", "Administrador", FormMethod.Post))
+                                    {
+                                       
+                                            <div class="form-body">
+                                                <div class="col-md-6">
+                                                    <label for="projectinput1">NOMBRE</label>
+                                                    @Html.TextBoxFor(mod =>mod.nombreprincipal, new { @type="text", @Value = ViewBag.Nombre })                                                  
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="projectinput2">ESLOGAN</label>
+                                                    @Html.TextBoxFor(mod => mod.eslogan, new { @type = "text", @Value = ViewBag.Eslogan })                                                   
+                                                </div>
+                                                <br /><br /><br /><div class="col-md-6" style="margin-left: 110px;">
+                                                    
+                                                </div>
+                                                <div class="col-md-6" style="margin-left: 110px;">
+                                                    <br /><input type="submit" value="ACTUALIZAR DATOS" title="Completar registro" class="btn btn-success btn-block" />
+                                                </div>
+                                            </div>
+                                        
+                                    }                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+

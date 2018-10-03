@@ -1,0 +1,119 @@
+﻿@model NTT.Registro_Model
+@{
+    ViewBag.Title = "CrearCliente";
+    Layout = "~/Views/Shared/_index.cshtml";
+
+}
+
+ @using (Html.BeginForm("RegistrarAdmin", "Registro", FormMethod.Post))
+ {
+
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="content-body">
+                        <!-- Basic form layout section start -->
+                        <section id="basic-form-layouts">
+                            <div class="row match-height">
+                                <div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="container">
+                                                    <div style="margin-left: 130px;">
+                                                        <h5>FORMULARIO REGISTRO DE CLIENTE</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                         
+                                        <div class="card-body collapse in">
+                                            <div class="card-block">
+
+                                                <form class="form">
+                                                    <div class="form-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">Primer Nombre</label>
+                                                                    @Html.TextBoxFor(model => model.primernombre, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput2">Segundo Nombre</label>
+                                                                    @Html.TextBoxFor(model => model.segundonombre, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput3">Primer Apellido</label>
+                                                                    @Html.TextBoxFor(model => model.primerapellido, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+
+                                                                 </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput4">Segundo Apellido</label>
+                                                                    @Html.TextBoxFor(model => model.segundoapellido, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput3">Numero de identificacion</label>
+                                                                    @Html.TextBoxFor(model => model.idcliente, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloNumeros(event)" })
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput4">Email</label>
+                                                                    @Html.TextBoxFor(model => model.email, new { @class = "form-control", @placeholder = "", @type = "text", @onKeyUp = "javascript:validarCorreo('correo2')", @id = "correo2" })
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput3">Usuario</label>
+                                                                    @Html.TextBoxFor(model => model.userc, new { @class = "form-control", @placeholder = "", @type = "text" })
+
+                                                                 </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput4">Contraseña</label>
+                                                                    @Html.TextBoxFor(mod => mod.passwordc, new { @class = "form-control", @placeholder = "", @type = "password", @id = "projectinput4" })
+
+                                                                     
+
+                                                                 </div>
+                                                            </div>
+                                                        </div>
+
+                                                     </div>
+
+                                                         <input type="submit" value="CREAR" title="Completar registro" class="btn btn-success btn-block" />
+
+                                                 </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+ }

@@ -1,0 +1,233 @@
+﻿@model NTT.Models.Tienda_Model
+
+@{
+
+    ViewBag.Title = "Detalles";
+    var rol = "-1";
+    if (Session["rol"] != null)
+    {
+        rol = Session["rol"].ToString();
+    }
+
+}
+
+<style>
+    #titulo, p,i{
+       color:black;
+        }
+    
+              p, i , a, #inn{
+            color:#2A2826;
+        }
+          #ss, #tis{
+          color: #2A2826;
+
+        }
+        .bootstrap-select > .dropdown-toggle {
+                width: 60%;
+                padding-right: 10px;
+                 padding-left: 20px;
+                 display: block; 
+            }
+   .btn, .navbar .navbar-nav>a.btn {
+ background-color: #355f84;
+
+
+            }
+    .btn-primary{
+            background-color: #d6d3d2;
+        color: #ffffff;
+    }
+
+    #comprar{
+    background-color: #5cb85c;
+    }
+    #detalles  {
+    background-color: #ada9a8;
+    color: #000000;
+}
+  #menti{
+    background-color: #ffffff;
+  }
+  
+  #carrito{
+    background-color: darkgrey;
+
+
+  }
+
+    h3, .h3 {
+    font-size: 1.825em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+
+</style>
+      @{
+ 
+
+      }
+     <div class="container">
+    <div class="section">
+        <div class="container"><br />
+            <div class="row">
+                <div class="col-md-5"> 
+                    <div>
+                        <div class="carousel-item active">
+                            <img class="d-block img-raised" src="~/Image/@ViewBag.foto">
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br /><div class="col-md-5 offset-1" style="margin:-1.5% 0;">
+                    <h2 class="title">@ViewBag.nombreprenda </h2>
+                     <h5>@ViewBag.empresa</h5>
+                    <h3>$ @ViewBag.precioprenda</h3>
+                    <div id="acordeon" class="accordeon">
+                        <div class="card card-plain">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h6 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-controls="collapseOne">
+                                        Descripción
+                                        <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" style="margin:-1.5% 0;">
+                                <div class="card-block">
+                                    @ViewBag.descripcionprenda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-plain"> 
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="card-block">
+                                    <p>*****</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  end acordeon -->
+                @using (Html.BeginForm("añadirprenda", "ClienteLogeado", new { nombre=ViewBag.nombreprenda,descripcion = ViewBag.descripcionprenda, precio = ViewBag.precioprenda, cantidadt = ViewBag.cantidad, fot = ViewBag.foto }, FormMethod.Post ))
+                {
+                    <div class="row pick-siz">
+                        <div class="col-md-6">
+                            <a>
+                                Seleccione Talla
+                            </a>
+                            @Html.DropDownListFor(m => m.idtalla, (SelectList)ViewBag.Talla, "Seleccione", new { @type = "select", @id = "TallaList", @class = "selectpicker", @style = "select-with-transition btn btn-block" })
+
+                        </div>
+                        <div class="col-md-6">
+                            <a>
+                                Seleccione Color
+                            </a>
+                            @Html.DropDownListFor(m => m.idcolor, (SelectList)ViewBag.Color, "Seleccione", new { @type = "select", @id = "ColorList", @class = "selectpicker", @style = "select-with-transition btn btn-block" })
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        @{
+                            if (ViewBag.cantidad != "0" && rol != "1")
+                            {
+                                <div data-component="quantityInput" data-component-name="quantity-ci5105004297" class="fb-quantity-input ">
+                                    <input data-validation-name="quantity" type="number" step="1" value="1" min="1" max=@ViewBag.cantidad name="cantidad">
+                                    
+                                </div>
+                                <input type="submit" value="Añadir" class="btn btn-primary mr-3" />        
+                            }
+
+                        }
+
+                    </div>
+                            }
+
+                                      @{
+                                          if (ViewBag.cantidad != "0")
+                                          {
+                                              <br />
+                                              <h5 style="margin-left: 50px;">DISPONIBLES @ViewBag.cantidad </h5>
+                                          }
+                                          else
+                                          {
+                                              <span class="badge badge-danger">Agotado</span>
+
+                                          }
+
+                                      }
+                @ViewBag.Message
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="section related-products"> 
+        <div class="container">
+            <h4 class="title text-center">
+                Productos que tambien podrian interesarte:</h3>
+                <div class="row">
+                    @{
+                        int con = 0;
+                        for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                        {
+                            var ID = Model.temp.Tables[0].Rows[i]["idprenda"].ToString();
+                            var Nombre = Model.temp.Tables[0].Rows[i]["nombreprenda"].ToString();
+                            var Precio = Model.temp.Tables[0].Rows[i]["precio"].ToString();
+                            var Genero = Model.temp.Tables[0].Rows[i]["genero"].ToString();
+                            var Descripcion = Model.temp.Tables[0].Rows[i]["descripcion"].ToString();
+                            var Empresa = Model.temp.Tables[0].Rows[i]["idtienda"].ToString();
+                            var Cantidad = Model.temp.Tables[0].Rows[i]["cantidad"].ToString();
+                            var foto = Model.temp.Tables[0].Rows[i]["foto"].ToString();
+
+                            if (Empresa == ViewBag.empresa && ID != ViewBag.id)
+                            {
+
+                                con = con + 1;
+
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="card card-product">
+                                        <div class="card-image">
+                                            <a href="#pablo">
+                                                <img class="img rounded" src="~/Image/@foto"   height="220"alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="card-block">
+                                            <h4 class="card-title">
+                                                <a href="#pablo" class="card-link">@Nombre</a>
+                                               
+                                            </h4>
+                                             
+                                            <div class="card-description" height="20">
+                                                @Descripcion
+                                            </div>
+                                            <div class="card-footer" style="margin-left: 20px;">
+                                                <div class="price-container">
+                                                    <span class="price"> $ @Precio</span>
+                                                </div>
+                                                <a  href=@Url.Action("productpage","TiendaLogeado",new { m=Model,id=ID, nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto,empresa=Empresa})  id="detalles" class="btn btn-neutral btn-sm">
+                                                    <i></i>DETALLES
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (con == 4)
+                            {
+                                break;
+                            }
+
+
+
+
+                        }
+                    }
+                </div>
+
+
+</div>
+        </div>
+                 
+
+
+
+
+<br /><br />

@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Confirmacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}  
+ 
+ <head>
+    <title>@ViewBag.Title</title>
+
+</head>
+ 
+
+    <body>
+        @{        if (ViewBag.showSuccessAlert!=false)
+            {
+            <script>
+            swal("Todo bien", "el dddd", "success");
+            </script>
+            }
+        }
+
+        <style>
+            .bootstrap-select > .dropdown-toggle {
+                width: 60%;
+                padding-right: 10px;
+                padding-left: 20px;
+                display: block;
+            }
+
+            #espe {
+                padding-right: 0px;
+            }
+
+            h6, h4 {
+                color: #35322E;
+            }
+               p, i , a, #inn{
+            color:#2A2826;
+        }
+          #ss, #tis{
+          color: #2A2826;
+
+        }
+         
+        </style>
+
+        <div class="page-header">
+            <div class="content-center">
+                <div class="container">
+                    <div>
+                    @{   
+
+                        if(Session["prenda"].ToString()=="1") {
+                            Session["prenda"] = "0";
+                                 <div class="container">
+                            <div class="alert alert-success" role="alert">
+                                <div class="container">
+                                    <div class="alert-icon">
+                                        <i class="now-ui-icons ui-2_like"></i>
+                                    </div>
+                                    <strong>EnHorabuena!</strong>  @Session["name"]  has creado exitosamente una nueva prenda.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">
+                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+

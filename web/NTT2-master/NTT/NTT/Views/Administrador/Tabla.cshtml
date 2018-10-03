@@ -1,0 +1,95 @@
+﻿
+@model NTT.Models.AdminModel
+@{
+    ViewBag.Title = "Tabla";
+    Layout = "~/Views/Shared/_index.cshtml";
+}
+
+ 
+<section id="basic-form-layouts">
+    <div class="row match-height">
+             <div class="container">
+                <div class="container-fluid">
+                    <!--CREAR-->
+                    <div class="col-xl-3 col-lg-12">
+                        <div>
+                            @using (Html.BeginForm("Tabla","Administrador",new { x=ViewBag.seleccion },FormMethod.Post)) {
+                                if (ViewBag.seleccion == "color")
+                                {
+                                 
+                                <!--TITULO STYLO-->
+                                            <div class="container">
+                                                         <h5>CREAR COLOR</h5>
+                                                 </div>
+                                <!--END ITULO STYLO-->
+                                    <br />
+                                    @Html.TextBoxFor(mod => mod.nombre, new { @class = "form-control", @placeholder = "Nombre de color" })
+                                }
+                                else if (ViewBag.seleccion == "talla")
+                                {                     
+                                <h5>CREAR TALLA</h5>
+                                
+                                    @Html.TextBoxFor(mod => mod.nombre, new { @class = "form-control", @placeholder = "Nombre de talla" , @maxlength = "3" })
+                                }
+                                <br />
+                                     <button type="submit" class="btn btn-success btn-block"  onclick="EventoAlert()">GUARDAR</button>
+                             }  
+                            
+                        </div>
+                    </div>
+                    <!--ELIMINAR-->
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="container">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Nombre</th>
+                                                        <th>Eliminar</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                @{
+                                                    for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                                    {
+                                                        var ID = "";
+                                                        var Nombre = "";
+                                                        if (ViewBag.seleccion == "color")
+                                                        {
+                                                            ID = Model.temp.Tables[0].Rows[i]["idcolor"].ToString();
+                                                            Nombre = Model.temp.Tables[0].Rows[i]["nombrecolor"].ToString();
+                                                        }
+                                                        else {
+                                                            ID = Model.temp.Tables[0].Rows[i]["idtalla"].ToString();
+                                                            Nombre = Model.temp.Tables[0].Rows[i]["nombretalla"].ToString();
+                                                        }
+
+                                                    <tr>
+                                                        <td>@ID</td>
+                                                        <td>@Nombre</td>
+                                                        <td>
+                                                            <a href=@Url.Action("eliminar","Administrador",new { id=ID,nombre=ViewBag.seleccion})  onclick="return confirmar()"class="btn btn-danger btn-icon btn-sm" data-original-title="" title="Eliminar">
+                                                              X  <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                                }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
+                </div>
+    </div>
+
+</section>
+

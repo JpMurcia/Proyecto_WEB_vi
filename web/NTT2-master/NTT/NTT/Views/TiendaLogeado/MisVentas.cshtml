@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "MisVentas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+           p, i , a, #inn{
+            color:#2A2826;
+        }
+          #ss, #tis{
+          color: #2A2826;
+
+        }
+</style>
+<div class="container">
+
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <br /><br /><br /><br />
+                    <table class="table table-shopping">
+                        <thead>
+                            <tr> 
+                                <th class="th-description">Nª DE PRENDA</th> 
+                                <th class="th-description">PRENDA</th>
+                                <th class="th-description">CANTIDAD</th>
+                                <th >PRECIO</th>  
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            @{
+                                for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                {
+                                    var ID = Model.temp.Tables[0].Rows[i]["idprenda"].ToString();
+                                    var Nombre = Model.temp.Tables[0].Rows[i]["nombreprenda"].ToString();
+                                    var cantidad = Model.temp.Tables[0].Rows[i]["cantidad"].ToString();
+                                    var precio = Model.temp.Tables[0].Rows[i]["subtotal"].ToString();
+
+                                    <tr>
+                                        <td>@ID</td>
+                                        <td>@Nombre</td>
+                                        <td>@cantidad</td>
+                                        <td>$@precio</td>      
+                                    </tr> 
+                                } 
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+ <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+

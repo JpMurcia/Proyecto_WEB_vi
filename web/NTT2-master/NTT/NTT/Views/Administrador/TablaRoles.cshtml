@@ -1,0 +1,110 @@
+﻿@model NTT.Models.AdminModel
+@{
+    ViewBag.Title = "TablaRoles";
+    Layout = "~/Views/Shared/_index.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Tabla @ViewBag.seleccion</h4>
+                <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                        <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                        <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+                        <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body collapse in">
+                <div class="card-block card-dashboard">
+
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    @{
+                                        if (ViewBag.seleccion == "cliente")
+                                        {
+                                            <th> ID</th>
+                                            <th>Nombres</th>
+                                            <th>Apellidos</th>
+                                            <th>Telefono</th>
+                                            <th>Email</th>
+                                        }
+                                        else if (ViewBag.seleccion == "tienda")
+                                        {
+                                            <th>Nit</th>
+                                            <th>Nombre</th>
+                                            <th>Telefono</th>
+                                            <th>Email</th>
+                                        }
+                                        else if (ViewBag.seleccion == "administrador")
+                                        {
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                        }
+                                    }
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                    {
+                                        if (ViewBag.seleccion == "cliente")
+                                        {
+                                            var ID = Model.temp.Tables[0].Rows[i]["idcliente"].ToString();
+                                            var Nombre1 = Model.temp.Tables[0].Rows[i]["primernombre"].ToString();
+                                            var Nombre2 = Model.temp.Tables[0].Rows[i]["segundonombre"].ToString();
+                                            var Apellido1 = Model.temp.Tables[0].Rows[i]["primerapellido"].ToString();
+                                            var Apellido2 = Model.temp.Tables[0].Rows[i]["segundoapellido"].ToString();
+                                            var Telefono = Model.temp.Tables[0].Rows[i]["telefono"].ToString();
+                                            var Email = Model.temp.Tables[0].Rows[i]["email"].ToString();
+                                            <tr>
+                                                <td>@ID</td>
+                                                <td>@Nombre1   @Nombre2</td>
+                                                <td>@Apellido1 @Apellido2</td>
+                                                <td>@Telefono</td>
+                                                <td>@Email</td>
+                                            </tr>
+                                        }
+                                        else if (ViewBag.seleccion == "tienda")
+                                        {
+                                            var Nit = Model.temp.Tables[0].Rows[i]["idtienda"].ToString();
+                                            var Nombre = Model.temp.Tables[0].Rows[i]["nombretienda"].ToString();
+                                            var Telefono = Model.temp.Tables[0].Rows[i]["telefono"].ToString();
+                                            var Email = Model.temp.Tables[0].Rows[i]["email"].ToString();
+                                            <tr>
+                                                <td>@Nit</td>
+                                                <td>@Nombre</td>
+                                                <td>@Telefono</td>
+                                                <td>@Email</td>
+                                            </tr>
+                                        }
+                                        else if (ViewBag.seleccion == "administrador")
+                                        {
+                                            var ID = Model.temp.Tables[0].Rows[i]["idusuario"].ToString();
+                                            var Nombre = Model.temp.Tables[0].Rows[i]["usuarionombre"].ToString();
+                                            <tr>
+                                                <td>@ID</td>
+                                                <td>@Nombre</td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

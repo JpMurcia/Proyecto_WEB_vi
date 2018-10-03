@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "MisPrendas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+    <style> 
+     p, i , a, #inn{
+    color:#2A2826;
+    }
+    #ss, #tis{
+    color: #2A2826;
+
+    }
+    </style>
+     @{    
+         if(Session["numeroprendas"].ToString()!= "0") {
+               <div class="container-fluid">
+                  <br /><br /><br /><div class="container">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead>
+                                  <tr>
+                                       <th>Nombre</th>
+                                      <th>Precio</th>
+                                      <th>Cantidad</th>  
+                                      <th class="text-right">Acciones</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  @{
+                                      for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                      {
+                                          var ID = Model.temp.Tables[0].Rows[i]["idprenda"].ToString();
+                                          var Nombre = Model.temp.Tables[0].Rows[i]["nombreprenda"].ToString();
+                                          var Precio = Model.temp.Tables[0].Rows[i]["precio"].ToString();
+                                          var Cantidad = Model.temp.Tables[0].Rows[i]["cantidad"].ToString();
+
+                              <tr>
+                                  <td>@Nombre</td>
+                                  <td>$@Precio</td>
+                                  <td>@Cantidad</td> 
+                                  <td class="td-actions text-right"> 
+                                      <a href=@Url.Action("editarprenda","SubirPrenda", new { idprenda =ID})  class="btn btn-success btn-icon btn-sm" data-original-title="" title="Editar">
+                                          <i class="now-ui-icons ui-2_settings-90"></i>
+                                      </a>
+                                      <a href=@Url.Action("eliminar","TiendaLogeado",new { id=ID}) class="btn btn-danger btn-icon btn-sm" data-original-title="" title="Eliminar">
+                                          <i class="now-ui-icons ui-1_simple-remove"></i>
+                                      </a>
+                                  </td>
+                              </tr>
+
+                            }
+
+                                  }
+
+
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />                             }
+                                      else
+                                      {
+                            <br /><br /><br /><div class="header header-primary text-center">
+                                <img src="../../Content/assets/img/blue-robot-vector-art.png" alt="..." width="250" height="300" />
+                                <h5>No hemos encontrado ninguna prenda tuya, animate a subir una!!</h5>
+                                                  <h6>Informanos si existe algun error</h6><button class="btn" onclick="javascript:esconde_div();">INFORMAR</button>
+
+                            </div><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+                                      }
+
+    }
+
+ 

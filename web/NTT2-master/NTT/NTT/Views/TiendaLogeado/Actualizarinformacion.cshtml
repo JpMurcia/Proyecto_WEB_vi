@@ -1,0 +1,177 @@
+﻿@model NTT.Registro_Model
+@{
+    ViewBag.Title = "Actualizarinformacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<head>
+    <title>@ViewBag.Title</title>
+
+</head>
+
+@using (Html.BeginForm("Actualizarinformacion", "TiendaLogeado", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<body class="signup-page">
+
+    <style>
+        body{
+         background-color:rgba(220, 217, 217, 0.52);
+        }
+ 
+        }
+        #si {
+            color: #2DB216;
+        }
+
+        #si1 {
+            color: #D9381C;
+        }
+
+        h5 {
+            color: #0F0F0F;
+        }
+
+        a {
+            color: #0F0F0F;
+        }
+
+        h6 {
+            color: #0F0F0F;
+        }
+
+        #pi {
+            color: black;
+        }
+
+        #tis {
+            color: #EFE3E3;
+        }
+
+        p, i, a, #inn {
+            color: #2A2826;
+        }
+
+        #ss, #tis {
+            color: #2A2826;
+        }
+    </style>
+    <!-- End Navbar -->
+
+         <div class="content-center">
+            <div class="container">
+                <div class="col-md content-center">
+                    <div class="card card-login card-plain">
+                        <div class="form" action="#">
+                        
+                            <!  --CLIENTE-->
+                            <br /><br /><div style="margin-left: 300px;">
+                                <div class="container-fluid" >
+                                    <div id="usuario" >
+                                        <div style="margin-left:120px;">
+                                            <h4>MI INFORMACIÓN</h4>
+                                        </div> 
+                                                 <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+
+                                                    <h6>NOMBRE</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.nombretienda, new { @type = "text", @Value = ViewBag.nombreem })
+ 
+                                                      </div>
+                                                    <h6>NIT</h6>
+                                                    <div  class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod =>mod.nit, new { @type = "text", @Value = ViewBag.id, @maxlength = "9" })
+                                                        
+                                                    </div>   
+                                                     <h6>USUARIO</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.user, new { @type = "text", @Value = Session["name"] })
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-4"> 
+                                                <div class="form-group">
+                                                    <h6>EMAIL</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.emailtienda, new { @type = "text", @Value = ViewBag.emailem })
+                                                    </div>
+                                                    <h6>TELEFONO</h6>
+                                                    @Html.TextBoxFor(mod => mod.telefonotienda, new { @type = "text", @Value = ViewBag.telefonoem })
+                                                    <br /><br />
+                                                                                                  </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <h6>Cambiar logo</h6>
+                                                <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                    <div class="fileinput-new thumbnail img-raised">
+                                                     @{ 
+                                                         if (Session["fotoem"] == null || Session["fotoem"].ToString()==" ") {
+                                                         <img src="../../Content/assets/img/image_placeholder.jpg" alt="..." width="200" height="150">
+                                                         }else {  
+                                                             <img src="~/Image/@Session["fotoem"]" alt="..." width="200" height="150" >
+                                                         }
+                                                         }
+
+
+                                                    </div>
+                                                    <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                                    <div>
+                                                        <span class="btn btn-raised btn-round btn-default btn-file">
+                                                            <span class="fileinput-new">Seleccione logo</span>
+                                                            <span class="fileinput-exists">Cambiar</span>
+                                                            <input type="file" name="file">
+                                                        </span>
+                                                        <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="now-ui-icons ui-1_simple-remove"></i> Eliminar</a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                                     <div class="col-md-10">
+                                                         <h6>Cambiar portada <a>[1400x500px]</a></h6> 
+                                                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                             <div class="fileinput-new thumbnail img-raised">
+                                                                 @{
+                                                                     if (Session["fotoem"] == null || Session["fotoem"].ToString() == " ")
+                                                                     {
+                                                                         <img src="../../Content/assets/img/pp-cov.jpg" alt="..." width="200" height="150">
+                                                                     }
+                                                                     else
+                                                                     {
+                                                                         <img src="~/Image/@Session["portada"]" alt="..." width="400" height="150">
+                                                                     }
+                                                                 }
+
+
+                                                             </div>
+                                                             <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                                             <div>
+                                                                 <span class="btn btn-raised btn-round btn-default btn-file">
+                                                                     <span class="fileinput-new">Seleccione portada</span>
+                                                                     <span class="fileinput-exists">Cambiar</span>
+                                                                     <input type="file" name="portada">
+                                                                 </span>
+                                                                 <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="now-ui-icons ui-1_simple-remove"></i> Eliminar</a>
+                                                             </div>
+                                                         </div>
+                                                     </div> 
+                                            </div>
+                                            <div class="col-xl-8" style="margin-left: 150px;">
+                                             
+
+                                                <input type="submit" value="ACTUALIZAR" class="btn btn-primary btn-round" />
+                                             </div> 
+                                    </div>
+                                 </div> 
+                            </div>
+                        </div>
+                         
+                     </div>
+                </div>
+
+            </div>
+
+        </div>
+
+ </body>
+  }

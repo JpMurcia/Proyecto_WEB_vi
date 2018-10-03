@@ -1,0 +1,232 @@
+﻿@model NTT.Models.Modelo
+@{
+
+}
+<head>
+    <title>Inicio - @ViewBag.NombrePrincipal</title>
+ 
+</head>
+
+<body class="ecommerce-page"  >
+<style>
+    #precio1{
+    color:  coral;
+    font-weight:bold; 
+    }
+    #otro{
+    font-style:normal;
+    }
+    #nnnn{
+    color:black;
+    }
+    #hseis{
+     color:#918E8E;
+
+    }
+       .btn-neutral {
+    background-color: #d6d4d4;
+    color: #020202;
+}
+   /* .page-header {
+        min-height: 74vh;
+    }*/
+      .section {
+    padding: 40px 0;
+    position: relative;
+ }
+
+    .form-control {
+        /* background-color: rgba(159, 165, 171, 0.48); */
+        border: 1px solid #616161;
+        color:black;
+    }
+    .input-group-addon {
+     border: 1px solid #2b0909;
+
+
+    
+</style>  
+      <div class="wrapper">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item">
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('../../Content/assets/img/bg43.jpg');"></div>
+                        <div class="content-center text-center">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2">
+                                    <h1 class="title">Compra lo que necesites</h1>
+                                    <h4 class="description text-white">Apropiate de tu propio estilo, encuentra lo que estas buscando</h4>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                      
+                   
+                </div>
+                <div class="carousel-item active">
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('../../Content/assets/img/bg41.jpg');"></div>
+                        <div class="content-center">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2 text-center">
+                                    <h1 class="title">Potencializa tu tienda</h1>
+                                    <h4 class="description text-white">Puedes vender todos los productos que tengas y ofrecer tus propios servicios</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('../../Content/assets/img/bg29.jpg');"></div>
+                        <div class="content-center text-center">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2">
+                                    <h1 class="title">@ViewBag.NombrePrincipal</h1>
+                                    <h4 class="description text-white">Compra, alquila y vende, todo en un solo lugar...</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <i class="now-ui-icons arrows-1_minimal-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <i class="now-ui-icons arrows-1_minimal-right"></i>
+            </a>
+        </div>
+        <div class="main">
+            <div class="section">
+                <div class="container">
+                    <h3  style="margin:-1.5% 0;"class="section-title">Encuentra lo que necesitas</h3>
+                    <div class="col-md-6">
+                        <div class="card card- card-form-horizontal" style="margin-left: 400px;">
+                            <div>
+                                    @using(Html.BeginForm("Index", "Inicio", FormMethod.Post))
+                                    {
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="now-ui-icons ui-1_zoom-bold"></i>
+                                                    </span>
+                                                    @Html.TextBoxFor(mod => mod.texto, new { @type = "text", @class = "form-control", @placeholder = "¿Que estas buscando?" })
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <button type="submit" class="btn btn-primary btn-bloock">BUSCAR</button>
+                                            </div>
+                                        </div>
+                                    }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                         
+
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                     
+    
+                                 </div> 
+                                </div>
+                           
+
+ 
+                                <div class="row">
+                                    @{
+                                        for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                        {
+                                            var ID = Model.temp.Tables[0].Rows[i]["idprenda"].ToString();
+                                            var Nombre = Model.temp.Tables[0].Rows[i]["nombreprenda"].ToString();
+                                            var Precio = Model.temp.Tables[0].Rows[i]["precio"].ToString(); 
+                                            var Genero = Model.temp.Tables[0].Rows[i]["genero"].ToString();
+                                            var Descripcion = Model.temp.Tables[0].Rows[i]["descripcion"].ToString();
+                                            var Cantidad = Model.temp.Tables[0].Rows[i]["cantidad"].ToString();
+                                            var Empresa = Model.temp.Tables[0].Rows[i]["idtienda"].ToString();
+                                            var foto = Model.temp.Tables[0].Rows[i]["foto"].ToString(); 
+                                            <div class="col-lg-3">
+                                                <div class="card card-product card-plain">
+                                                    <div class="card card-product card-plain">
+                                                        <div class="card-image" style="margin:-3.5% 0;">
+                                                            <a href=@Url.Action("productpage","TiendaLogeado",new { id=ID,nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto})>
+                                                                <img src="~/Image/@foto"  height="220"alt="..." />
+                                                            </a>
+                                                            <a href=@Url.Action("productpage","TiendaLogeado",new { id=ID,nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto}) style="margin:-1.5% 0;">
+                                                                <h4 id="nnnn" class="card-title">@Nombre</h4>
+
+                                                            </a>
+                                                            <div class="card-title" style="margin:-1.5% 0;">
+                                                                <h6 id="hseis">Tienda</h6>
+                                                            </div>
+                                                            <div class="card-title">
+                                                                <h4 style="margin:-2.5% 0;">
+                                                                    <span id="precio1" class="price">
+                                                                        $ @Precio <span id="ss">
+
+                                                                        </span>
+                                                                    </span>
+                                                                </h4>
+                                                                @{
+                                                                    if (Cantidad == "0")
+                                                                    {
+                                                                    <span class="badge badge-danger">Agotado</span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                    <h6 id="xxx">
+                                                                        <a id="otro">Disponibles:</a>@Cantidad
+                                                                    </h6>
+                                                                    }
+
+                                                                }
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                             @{
+
+                                                                 if (Cantidad != "0")
+                                                                 {
+                                                                     var accion = "";
+                                                                     if (Session["key"] != null) {
+                                                                          accion = "return confircarro()";
+                                                                     }
+                                                                   
+                                                                 }
+                                                            }
+                                                            <a style="margin-left: 50px;"class="btn btn-primary btn-sm" href=@Url.Action("productpage","TiendaLogeado",new { id=ID, nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto,empresa=Empresa}) class="btn btn-neutral btn-sm"  >
+                                                                <i></i>DETALLES
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div> 
+                                           }
+                                    }
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+     </div>
+ </body>
+
+ 

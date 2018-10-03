@@ -1,0 +1,260 @@
+﻿ @model NTT.Registro_Model
+
+@{
+    ViewBag.Title = "Registro  - "+ViewBag.NombrePrincipal;
+}
+
+<head>
+    <title>@ViewBag.Title</title>
+
+</head>
+<script> 
+     
+
+function esconde_div(){
+   var elemento = document.getElementById("usuario");
+   elemento.style.display = 'block';
+elemento =document.getElementById("empresa");
+elemento.style.display = 'none';
+elemento = document.getElementById("boton");
+elemento.style.display = 'block';
+
+
+}
+
+function visible_div(){
+   var elemento = document.getElementById("empresa");
+   elemento.style.display = 'block';
+   elemento =document.getElementById("usuario");
+   elemento.style.display = 'none';
+   elemento = document.getElementById("boton");
+   elemento.style.display = 'block';
+
+}
+</script>
+
+@using (Html.BeginForm("Registro", "Registro", FormMethod.Post))
+{
+
+    <body>
+         <style>
+             .input-group.form-group-no-border .form-control:hover {
+             color: black;
+              }
+             input:hover {
+             color: black;
+            background-color:indianred;
+              }
+            .input-group.form-group-no-border .form-control:focus{ outline: solid;
+                            color:black;
+                            background-color: rgb(247, 244, 243);
+
+             }
+             input:focus{ outline: none;
+                         
+
+             }
+              
+            d{
+            color:black;
+            }
+             input {
+             width: 200px;
+             }
+             .input-group.form-group-no-border.input-lg .form-control {
+                 padding: 10px 08px;
+                  width: 5px;
+ 
+              }         
+              .col-md-6{
+               width: 20px;
+
+              }
+              .col-center{
+    float: none;
+}
+#terminos{
+color:#E46400;
+
+}
+.input-group.form-group-no-border .form-control{
+                 background-color: rgb(247, 244, 243);
+}
+             .checkbox label::before, .checkbox label::after {
+                 background-color: rgb(247, 244, 243);
+             }
+
+         </style>
+
+        <div class="page-header" filter-color="write">
+            <div class="page-header-image" style="background-image:url(../../Content/assets/img/project16.jpg)"></div>
+            <div class="content-center">
+                <div class="container">
+                    <div class="col-md content-center">
+                        <div class="card card-login card-plain">
+                            <div class="form" action="#">
+                                <div class="header header-primary text-center">
+                                    <h4>REGISTRAR</h4>
+                                </div>
+                                <ul class="nav nav-pills nav-pills-primary justify-content-center" role="tablist">
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-toggle="tab" title="Crear una cuenta como cliente" href="#pill2" role="tablist" onclick=" javascript:esconde_div(); ">
+                                            <d> Cliente</d>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" data-toggle="tab" role="tablist" title="Crear una cuenta como tienda" onclick="javascript:visible_div(); ">
+                                            <d> Tienda</d>
+                                        </button>
+                                    </li>
+                                </ul><br>
+
+                                <!--CLIENTE-->
+                                <div style="margin-left: 110px;">
+                                    <div class="container-fluid">
+                                        <div id="usuario" style="display: none">
+
+                                            <div class="row">
+                                                <div class="col-xl-5">
+                                                    <div class="form-group">
+
+                                                        <h6>Primer Nombre</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.primernombre, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+
+                                                        </div>
+                                                        <h6>Segundo Nombre</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.segundonombre, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+
+                                                        </div>
+                                                        <h6>Primer Apellido</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.primerapellido, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+
+
+                                                        </div>
+                                                        <h6>Segundo Apellido</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.segundoapellido, new { @class = "form-control", @placeholder = "", @type = "text", @onkeypress = "return soloLetras(event)" })
+                                                        </div>
+                                                        <h6>Numero de identificacion</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.idcliente, new { @class = "form-control", @placeholder = "", @maxlength = "11", @type = "text", @onkeypress = "return soloNumeros(event)" })
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-xl-5">
+
+                                                    <div class="form-group">
+                                                        <h6>Email</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.email, new { @class = "form-control", @placeholder = "", @type = "text", @id = "correo2" })
+
+
+                                                        </div>
+                                                        <h6>Telefono</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.telefono, new { @class = "form-control", @placeholder = "", @maxlength = "11", @type = "text", @onkeypress = "return soloNumeros(event)" })
+                                                        </div>
+                                                        <h6>Usuario</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.userc, new { @class = "form-control", @placeholder = "", @type = "text", @onKeyUp = "javascript:validarEmail('correo2')" })
+                                                        </div>
+                                                        <h6>Contraseña</h6>
+                                                        <div class="input-group form-group-no-border input-lg">
+                                                            @Html.TextBoxFor(model => model.passwordc, new { @class = "form-control", @placeholder = "", @type = "password" })
+
+                                                        </div>
+                                                         
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <!-- END CLIENTE -->
+                                    </div>
+
+                                    <!--TIENDA -->
+                                    <div id="empresa" style="display: none">
+
+                                        <div class="row">
+
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+
+                                                    <h6>Nombre de Tienda</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.nombretienda, new { @class = "form-control", @placeholder = "", @onkeypress = "return soloLetras(event)" })
+
+
+                                                    </div>
+                                                    <h6>NIT</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.nit, new { @class = "form-control", @placeholder = "", @maxlength = "9", @onkeypress = "return soloNumeros(event)" })
+                                                    </div>
+                                                    <h6>Email</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.emailtienda, new { @class = "form-control", @placeholder = "", @onKeyUp = "", @id = "correo" })
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+
+                                                <div class="form-group">
+                                                    <h6>Telefono</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.telefonotienda, new { @class = "form-control", @placeholder = "", @maxlength = "10",@onkeypress = "return soloNumeros(event)" })
+                                                    </div>
+
+                                                    <h6>Usuario</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.user, new { @class = "form-control", @placeholder = "", @type = "text", @onKeyUp = "javascript:validarEmail('correo')" })
+                                                    </div>
+                                                    <h6>ContraseÃ±a</h6>
+                                                    <div class="input-group form-group-no-border input-lg">
+                                                        @Html.TextBoxFor(mod => mod.password, new { @class = "form-control", @placeholder = "", @type = "password" })
+
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                                        <!-- END TIENDA -->
+                                        <div style="display: none" id="boton">
+                                           
+                                            <div class="checkbox">
+                                                <input id="checkbox1" type="checkbox" checked="">
+                                                <label for="checkbox1">
+                                                    Acepto
+                                                    <a target="_blank" href=@Url.Action("terminosycondiciones","Inicio") id="terminos">Los terminos y condiciones</a>.
+                                                </label>
+                                            </div><br />
+                                            <input type="submit" value="Registrarse" class="btn btn-primary btn-round btn-lg"   onclick="return confirmarregistro()"/>
+                                        </div>
+                                    @ViewBag.mensaje
+                                </div> 
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+     </body>
+}
+
+

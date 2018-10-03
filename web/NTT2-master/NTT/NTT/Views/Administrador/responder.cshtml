@@ -1,0 +1,63 @@
+﻿@model NTT.Models.AdminModel
+
+@{
+    ViewBag.Title = "responder";
+    Layout = "~/Views/Shared/_index.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+        <div class="card" style="height: 887px;">
+
+            <div class="card-body collapse in">
+                <div class="card-block">
+@using (Html.BeginForm("responder", "Administrador", FormMethod.Post))
+{
+
+
+                    <form class="form">
+                        <div class="form-body">
+
+                            <div class="form-group">
+                                <h6><label for="issueinput1">Usuario</label></h6>   
+                                <input type="text" id="issueinput1" class="form-control" Value=@Session["usuariobandeja"] name="issuetitle" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Issue Title" data-original-title="" title="" disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <h6><label for="issueinput2">Email usuario</label></h6>
+
+                                <input type="text" id="issueinput2" class="form-control" Value=@Session["emailbandeja"] name="openedby" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Opened By" data-original-title="" title="" disabled>
+                            </div>
+                            <div class="form-group">
+                                <h6>  <label for="issueinput8">Mensaje recibido</label></h6>
+                                <div class="card-text">
+                                    <p>@Session["mensajebandeja"]</p>
+                                </div>
+  
+
+                            <div class="form-group">
+                                <h6><label for="issueinput8">Mensaje de respuesta</label></h6> 
+                                @Html.TextAreaFor(mod => mod.mensaje, new { @rows = "5", @class = "form-control", @placeholder = "Escriba aqui el mensaje de respuesta" })
+                             </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <a href=@Url.Action("Bandejademensajes","Administrador")>
+                                <button type="button" class="btn btn-warning mr-1">
+                                    <i class="icon-cross2"></i> VOLVER
+                                </button>
+                            </a>
+                                 <button type="submit" class="btn btn-primary">
+                                <i class="icon-check2"></i> Enviar
+                            </button>
+                        </div>
+                    </form>
+
+}
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

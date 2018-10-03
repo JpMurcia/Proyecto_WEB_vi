@@ -1,0 +1,241 @@
+﻿@model NTT.Models.Modelo
+
+@{
+    ViewBag.Title = "Mi Carro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+  
+<head>
+    <title>@ViewBag.Title</title>
+
+</head>
+
+ 
+
+    <style>
+        #sub {
+            color: black;
+        }
+
+        p, i {
+            color: black;
+        }
+
+        #aceptamos {
+            color: darkgray;
+            font-size: 12px;
+        }
+
+        #ss, #tis {
+            color: black;
+        }
+
+        p, i, a, #inn {
+            color: #2A2826;
+        }
+
+        #ss, #tis {
+            color: #2A2826;
+        }
+
+        #n {
+            color: darkgray;
+        }
+
+        .btn-info {
+            background-color: #17fd1b;
+        }
+           .bootstrap-select > .dropdown-toggle {
+                width: 60%;
+                padding-right: 10px;
+                 padding-left: 10px;
+                 display: block; 
+            }
+            #acepta{
+
+            }
+        #pago {
+        font-size:13px;
+        }
+        #pas{
+        background-color: #ffb236;
+        }
+        .btn.btn-icon, .navbar .navbar-nav > a.btn.btn-icon {
+            height: 4rem;
+            min-width: 4rem;
+        }
+        #redon{
+        background-color: #afafaf;
+        }
+    </style>
+
+              <div class="container">
+
+                <div class="container">
+
+                    <div id="detalles">
+
+
+                        <div>
+                            <br /><br />
+                            <h4>BOLSA DE PRODUCTOS <a id="n">(@Session["carrito"] PRENDA)</a></h4>
+                            <table class="table table-shopping">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"></th>
+                                        <th>PRENDA</th>
+                                        <th class="text-right">PRECIO</th> 
+                                        <th class="text-right">TALLA</th> 
+                                        <th class="text-right">COLOR</th>   
+                                        <th class="text-right">CANTIDAD</th>
+                                        <th class="text-right">SUBTOTAL</th>
+                                        <th>ACCION</th>
+                                    </tr>
+                                </thead>
+                                @{  
+                                    var total = "0";
+                                    for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                    {
+                                        var foto = Model.temp.Tables[0].Rows[i]["foto"].ToString();
+                                        var name = Model.temp.Tables[0].Rows[i]["nombreprenda"].ToString();
+                                        var precio = Model.temp.Tables[0].Rows[i]["precio"].ToString();
+                                        var empresa = Model.temp.Tables[0].Rows[i]["nombretienda"].ToString();
+                                        var cantidad = Model.temp.Tables[0].Rows[i]["cantidad"].ToString();
+                                        var cantidadgeneral = Model.temp.Tables[0].Rows[i]["canti"].ToString();
+                                        var id = Model.temp.Tables[0].Rows[i]["idprenda"].ToString();
+                                        var subtotal = Model.temp.Tables[0].Rows[i]["subtotal"].ToString();
+                                        var color = Model.temp.Tables[0].Rows[i]["Colorsito"].ToString();
+                                        var talla = Model.temp.Tables[0].Rows[i]["tallita"].ToString();
+                                        total = Model.temp.Tables[0].Rows[i]["valortotal"].ToString();
+
+                                         <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="img-container">
+                                                        <img src="../../Image/@foto" alt="...">
+                                                    </div>
+                                                </td >
+                                                <td class="td-name">
+                                                    <a href="#jacket">@name</a>
+                                                    <br />
+                                                    <small>@empresa</small>
+                                                </td>
+                                                <td class="td-number">
+                                                    <small>$</small>@precio
+                                                </td>
+                                                <td class="td-number">
+                                                    <small></small>@talla
+                                                </td>
+                                                <td class="td-number">
+                                                    <small></small>@color
+                                                </td>
+                                                <td class="td-number">
+
+                                                    <div id="canti" data-component="quantityInput" data-component-name="quantity-ci5105004297" class="fb-quantity-input ">
+                                                        <input data-validation-name="quantity" type="number" step="1" value=@cantidad min="1" max=@cantidadgeneral enable>
+                                                    </div>
+                                                 </td>
+                                                <td class="td-number">
+                                                    <small>$</small>@subtotal
+                                                </td>
+                                                <td class="td-actions">
+                                                    <a href=@Url.Action("eliminarprendacarrito", "ClienteLogeado",new {idprenda=id })>
+                                                        <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-neutral">
+
+                                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+
+                                                        </button>
+                                                    </a>
+                                                </td> 
+                                            </tr>
+                                        </tbody>
+
+
+
+                                    }
+                                }
+                                 
+                            </table>
+
+                        </div>
+
+                         <div class="col-md-offset-5">
+                            <a id="aceptamos">Valor Total: <a id="sub">$@total </a></a>
+                            <button  class="btn btn-info btn-round" onclick="javascript:esconde_div(); ">IR A COMPRAR</button>
+ </div>
+
+                        <h5>Opciones de pago</h5>
+                        <h5 style="margin:-1.0% 0;" id="aceptamos">Aceptamos los siguientes métodos de pago:</h5>
+                        <img src="../../Content/assets/img/efecty.svg" alt="..." width="50" height="50">
+                     
+                    </div> <br /><br /><br /><br /><br /><br />
+  <div id="despacho"  style="display: none">
+                         <div class="row pick-siz">
+                               
+
+                        </div>
+                        <br />
+                        <h6 id="acepta">DIRECCIÓN DE RESIDENCIA</h6>
+                        <input type="text" />
+<br /><br />      <button class="btn btn-info btn-round" onclick="javascript:visible_div(); ">CONTINUAR</button>
+      <br /><br /><br />
+                    </div>
+
+                    
+                    <div id="pago" style="display: none">
+                        <h5>INTRUCCIONES</h5>
+                         <h5>Usted debera cancelar la totalidad del pedido cuando el producto llege a su residencia
+                         </h5>
+                          <div class="row pick-siz">
+                              <a href=@Url.Action("HacerCompra","ClienteLogeado")>
+                                  <br /><br />      <button class="btn btn-info btn-round" id="pas" onclick="javascript:fin(); ">ENTENDIDO</button>
+                              </a>
+
+                        </div>
+                         
+                    </div>
+                   
+                    <br /><br /><br /><br /><br /><br /><br /><br />
+
+
+                    <br /><br /><br /><br />
+                 </div>
+                
+                 </div>
+      
+ 
+    <script>
+function esconde_div(){
+   var elemento = document.getElementById("detalles");
+   elemento.style.display = 'none';
+elemento =document.getElementById("despacho");
+elemento.style.display = 'block'; 
+
+
+}
+
+function visible_div(){
+    var elemento = document.getElementById("despacho");
+    elemento.style.display = 'none';
+    elemento = document.getElementById("pago");
+    elemento.style.display = 'block';
+
+
+
+}
+function fin() {
+    var elemento = document.getElementById("pago");
+    elemento.style.display = 'none';
+    elemento = document.getElementById("fin");
+    elemento.style.display = 'block';
+
+
+
+}
+    </script>
+
+ 
+
+<!-- Mirrored from demos.creative-tim.com/now-ui-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Sep 2017 15:19:16 GMT -->
+ 

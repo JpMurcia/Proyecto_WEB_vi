@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "PerfilAdmin";
+    Layout = "~/Views/Shared/_index.cshtml";
+
+}
+<body >
+    <div class="row">
+        <div class="col-xl-3 col-lg-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="media">
+                       
+                         <div class="p-2 text-xs-center bg-cyan bg-darken-2 media-left media-middle">
+                             <a href="#1">
+                                 <i class="icon-t-shirt font-large-2 white"></i>
+                             </a>
+                            </div>
+                        <div class="p-2 bg-cyan white media-body">
+                            <h5>PRODUCTOS</h5>
+                            <h5 class="text-bold-400">@ViewBag.producto</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="media">
+                        <div class="p-2 text-xs-center bg-deep-orange bg-darken-2 media-left media-middle">
+                            <a href=@Url.Action("TablaCliente","Administrador")>
+                                <i class="icon-user1 font-large-2 white"></i></a>
+</div>
+                        <div class="p-2 bg-deep-orange white media-body">
+                            <h5>CLIENTES</h5>
+                            <h5 class="text-bold-400">@ViewBag.clientes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="media">
+                        <div class="p-2 text-xs-center bg-teal bg-darken-2 media-left media-middle">
+                            <a href=@Url.Action("TablaTienda","Administrador")>
+                                <i class="icon-cart font-large-2 white"></i></a>
+</div>
+                        <div class="p-2 bg-teal white media-body">
+                            <h5>TIENDAS</h5>
+                            <h5 class="text-bold-400">@ViewBag.tiendas</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="media">
+                        <div class="p-2 text-xs-center bg-pink bg-darken-2 media-left media-middle">
+                            <i class="icon-banknote font-large-2 white"></i>
+                        </div>
+                        <div class="p-2 bg-pink white media-body">
+                            <h5>COMPRAS</h5>
+                            <h5 class="text-bold-400">0</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>

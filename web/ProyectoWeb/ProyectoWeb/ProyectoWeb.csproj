@@ -118,7 +118,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conexion\Text.txt" />
     <Content Include="Global.asax" />
     <Content Include="conteiner\css\bootstrap-theme.css" />
     <Content Include="conteiner\css\bootstrap-theme.min.css" />
@@ -131,19 +130,18 @@
     <Content Include="conteiner\js\bootstrap.js" />
     <Content Include="conteiner\js\bootstrap.min.js" />
     <Content Include="conteiner\js\npm.js" />
-    <Content Include="Login\login.html" />
+    <Content Include="Views\Login\login.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Conexion\AccesoDatos\Conection\Connection.cs" />
-    <Compile Include="Conexion\AccesoDatos\Conection\Datos.cs" />
-    <Compile Include="Conexion\AccesoDatos\Interface\IDatos.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\grupo_invest.cs" />
+    <Compile Include="Models\usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +159,7 @@
     <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="conteiner\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="conteiner\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Views\_layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,7 +170,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConexionBD\ConexionBD.csproj">
+      <Project>{7852acdf-ebe6-49d1-b0cd-d73b7f35a9fb}</Project>
+      <Name>ConexionBD</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

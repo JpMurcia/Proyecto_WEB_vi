@@ -1,0 +1,78 @@
+﻿@model NTT.Mensaje_Model
+
+@{
+    ViewBag.Title = "informar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+     <style>
+       .description{
+                       text-align: justify;
+
+
+       }
+    </style>
+@using (Html.BeginForm("informar", "ClienteLogeado", FormMethod.Post))
+{  
+    <div class="cd-section" id="contactus">
+        <!--     *********    CONTACT US 1     *********      -->
+        <div class="contactus-1 section-image" style="background-image: url('../../Content/assets/img/bg43.jpg')">
+
+ 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5" text-center">
+                        <h2 class="title">Informanos...</h2>
+                        <h4 class="description">¿Necesitas más información? Adecuamos este espacio para que nos proporciones todas tus dudas o sugerencias, Envianos todas la informacion de tu consulta y enseguida te enviaremos la respuesta a tu correo personal.  </h4>
+                        <div class="info info-horizontal">
+                            <div class="icon icon-primary">
+                                <i class="now-ui-icons location_pin"></i>
+                            </div>
+                            <div class="description">
+                                <h4 class="info-title">Colombia</h4>
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+ 
+                    <div class="col-md-5 offset-md-2">
+                        <div class="card card-contact card-raised">
+                            <form role="form" id="contact-form" method="post">
+                                <div class="card-header text-center">
+                                    <h4 class="card-title">Formulario de mensaje</h4>
+                                </div>
+                                <div class="card-block">
+                                     
+                                    <div class="form-group">
+                                        <label>Asunto</label>
+                                        <div class="input-group">
+                                            @Html.TextBoxFor(model => model.asunto, new { @class = "form-control", @placeholder = "Asunto", @type = "text" })
+                                             
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mensaje de consulta</label>
+                                        @Html.TextAreaFor(model => model.descripcion, new { @class = "form-control", @rows = "6",@placeholder = "", @type = "textarea",@name="message",id="message" })
+
+  </div>
+                                    <div class="row">
+                                            <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary btn-round pull-right">Enviar mensaje</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </form>
+
+                            <br /><br />
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+ 
+               </div> 
+      
+    </div> 
+}  
+  

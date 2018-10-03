@@ -1,0 +1,287 @@
+﻿@model NTT.Models.Modelo
+@{
+
+    ViewBag.Title = "Mi Tienda";
+    var rol = "-1";
+    if (Session["rol"] != null)
+    {
+        rol = Session["rol"].ToString();
+    }
+
+}
+
+  <head>
+    <title>@Session["name"] - @ViewBag.Title</title>
+
+</head>
+              
+
+    <body class="ecommerce-page">
+         
+        <style>
+              #precio1{
+    color:  coral;
+    font-weight:bold; 
+    }
+             .btn-neutral {
+    background-color: #d6d4d4;
+    color: #020202;
+}
+              
+                #menu1 {
+                background-color: #F9F7F7;
+            }
+
+            body {
+                background-color: #F9F7F7;
+            }
+             
+            .bootstrap-select > .dropdown-toggle {
+                width: 60%;
+                padding-right: 10px;
+                 padding-left: 20px;
+                 display: block; 
+            }
+            #espe {
+              padding-right: 0px;
+            }
+            
+            h6, h4{
+            color:#35322E;
+            }
+          
+        .page-header.page-header-mini{
+        min-height: 55vh;
+        max-height: 600px;
+
+        }
+        p{
+
+        padding: 5px;
+          
+        }
+ 
+         
+        </style>
+
+        <!-- Navbar -->
+        <!-- End Navbar -->
+        <div class="page-header page-header-mini">
+            @{
+                if (Session["portada"] == null || Session["portada"].ToString() == " ")
+                {
+                    <div class="page-header-image" style="background-image: url(../../Content/assets/img/pp-cov.jpg);" width="50" height="100"></div>
+                }
+                else
+                {
+                    <div class="page-header-image" style="background-image: url(../../Content/assets/img/@Session["portada"]);" width="50" height="100"></div>
+                }
+            }
+            <div class="container">
+            <div class="carousel-item active" STYLE="position:absolute;">
+                <br />
+                <div class="col-md-3">
+
+                    <div class="card card-pricing" style="margin:-2.5% 0;">
+
+                        <div>
+
+                            @{
+                                if (ViewBag.foto == null || ViewBag.foto == " ")
+                                {
+
+                                    <img src="../../Content/assets/img/image_placeholder.jpg" alt="..." width="200" height="150">
+                                }
+                                else
+                                {
+                                    <img src="~/Image/@ViewBag.foto" alt="..." width="180" height="130" top:50px;>
+                                }
+                            }
+
+                            <h3 class="card-title" style="margin:-2.5% 0;">
+                                <small></small>@Session["ver"]
+                            </h3>
+                            <ul>
+                                <li>@Session["numeroprendas"] PRENDAS</li>
+                                <li>@ViewBag.ventas VENTAS</li> 
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+            </div>
+            <div class="wrapper">
+
+
+                <div class="main">
+                    <div class="container"> 
+                        <div class="row">
+
+
+                            <br />
+ 
+                            <!-- END CALIFICACION-->
+
+
+                            @{
+                                if (rol == "2")
+                                {
+
+                                    <div>
+                                        <div class="card card-refine card-plain">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <h6 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        TALLA
+                                                        <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="card-block">
+                                                    <div class="checkbox">
+                                                        <input id="checkbox1" type="checkbox" checked="">
+                                                        <label for="checkbox1">
+
+                                                        </label>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-refine card-plain">
+                                            <div class="card-header" role="tab" id="headingfour">
+                                                <h6 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                                        COLOR
+                                                        <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                            <div id="collapsefour" class="collapse" role="tabpanel" aria-labelledby="headingfour">
+                                                <div class="card-block">
+                                                    <div class="checkbox">
+                                                        <input id="checkbox27" type="checkbox">
+                                                        <label for="checkbox27">
+
+                                                        </label>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                }
+                            }
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <h4 class="card-title text-center">ARTICULOS</h4>
+                            <div class="container">
+                                <div class="row"> 
+                                    @{
+                                        if (Session["numeroprendas"].ToString() != "0")
+                                        {
+                                            for (int i = 0; i < Model.temp.Tables[0].Rows.Count; i++)
+                                            {
+                                                var ID = Model.temp.Tables[0].Rows[i]["idprenda"].ToString();
+                                                var Nombre = Model.temp.Tables[0].Rows[i]["nombreprenda"].ToString();
+                                                var Precio = Model.temp.Tables[0].Rows[i]["precio"].ToString(); 
+                                                var Genero = Model.temp.Tables[0].Rows[i]["genero"].ToString();
+                                                var Descripcion = Model.temp.Tables[0].Rows[i]["descripcion"].ToString();
+                                                var Empresa = Model.temp.Tables[0].Rows[i]["idtienda"].ToString();
+                                                var Cantidad = Model.temp.Tables[0].Rows[i]["cantidad"].ToString();
+                                                var foto = Model.temp.Tables[0].Rows[i]["foto"].ToString();
+
+                                                if (Empresa == Session["idtienda"].ToString())
+                                                {
+                                                    <div class="col-lg-4">
+                                                        <div class="card card-product card-plain">
+                                                            <div class="card card-product card-plain">
+
+                                                                <div class="card-image" style="margin:-3.5% 0;">
+                                                                    <a href=@Url.Action("productpage","TiendaLogeado",new { id=ID, nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto,empresa=Empresa})>
+                                                                        <img src="~/Image/@foto" height="220" alt="..." />
+                                                                    </a>
+                                                                    <a href=@Url.Action("productpage","TiendaLogeado",new { id=ID, nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto,empresa=Empresa}) style="margin:-1.5% 0;">
+                                                                        <h4 id="nnnn" class="card-title">@Nombre</h4>
+
+                                                                    </a>
+                                                                    <div class="card-title">
+                                                                        <h4 style="margin:-2.5% 0;">
+                                                                            <span id="precio1" class="price">
+                                                                                $ @Precio <span id="ss"> 
+                                                                                </span>
+                                                                            </span>
+                                                                        </h4>
+                                                                        @{
+                                                                            if (Cantidad == "0")
+                                                                            {
+                                                                                <span class="badge badge-danger">Agotado</span>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <h6 id="xxx">
+                                                                                    Disponibles: @Cantidad
+                                                                                </h6>
+                                                                            } 
+                                                                        } 
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    @{
+                                                                        if (rol == "2")
+                                                                        {   <a href=@Url.Action("añadirprenda","ClienteLogeado", new {id =ID ,cantidad= 1, vista="MiTienda"}) class="btn btn-neutral btn-sm">
+                                                                        <i class="now-ui-icons shopping_cart-simple"></i> AÑADIR
+                                                                    </a>
+                                                                        }
+                                                                        if (rol == "1")
+                                                                        {
+                                                                            <a href=@Url.Action("editarprenda","SubirPrenda", new { idprenda=ID}) class="btn btn-neutral btn-sm">
+                                                                                <i class="now-ui-icons ui-2_settings-90"></i> EDITAR
+                                                                            </a>
+
+                                                                        }
+                                                                        <a class="btn btn-primary btn-sm" href=@Url.Action("productpage","TiendaLogeado",new { id=ID, nombre=Nombre, descripcion=Descripcion, precio=Precio, cantidad=Cantidad,fot=foto,empresa=Empresa}) class="btn btn-neutral btn-sm">
+                                                                            <i></i>DETALLES
+                                                                        </a>
+                                                                    }
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                                  }
+
+                                                          }
+
+                                           }
+
+                                    }
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div> 
+ 
+
+            </body>
+ 
