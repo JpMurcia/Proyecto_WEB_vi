@@ -1,3 +1,5 @@
+use sigepi;
+
 insert into tipo_usuario(id_tipo_usuario,nom_tipo_usuario)
 	values(1,"Lider"),
 		(2,"miembro"),
